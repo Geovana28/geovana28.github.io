@@ -1,254 +1,220 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Geovana | Full Stack & Data Science Portfolio</title>
-  
-  <meta name="description" content="Portfólio de Geovana - Full Stack Developer (PHP MVC, JavaScript, SQL) & Data Science / AI Engineer.">
-  
-  <!-- Google Fonts: Inter & Outfit -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
-  
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geovana | InfiniteLoop – Portfólio Full Stack & Data Science</title>
+    
+    <!-- FONTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="container">
-      <a href="#" class="nav-brand">
-        <i data-lucide="code-2"></i> Geovana<span>.dev</span>
-      </a>
-      <ul class="nav-links">
-        <li><a href="#about"><i data-lucide="user"></i> Sobre</a></li>
-        <li><a href="#projects"><i data-lucide="folder-git-2"></i> Projetos</a></li>
-        <li><a href="#skills"><i data-lucide="cpu"></i> Stacks & Habilidades</a></li>
-      </ul>
-      <div class="nav-cta">
-        <a href="https://github.com/Geovana28" target="_blank" class="btn btn-outline">
-          <i data-lucide="github"></i> GitHub
-        </a>
-      </div>
-    </div>
-  </nav>
+    <!-- CABEÇALHO -->
+    <header>
+        <div class="interface"> 
+            <div class="logo">
+                <a href="#topo">
+                    <img src="images/logo1.png" alt="Logo InfiniteLoop">
+                </a>
+            </div><!--logo-->
+    
+            <nav class="menu-desktop"> 
+                <ul>
+                    <li><a href="#topo">Início</a></li>
+                    <li><a href="#especialidades">Especialidades</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#portfolio">Projetos</a></li>
+                </ul>
+            </nav>
+    
+            <div class="btn-contato">
+                <a href="#contato"><button>Contato</button></a>
+            </div><!--botao contato-->
+        </div><!--interface-->
+    </header>
 
-  <!-- Hero Section -->
-  <header class="hero" id="about">
-    <div class="container">
-      <div class="hero-content">
-        <div class="hero-badge">
-          <span class="pulse-dot"></span> Full Stack Developer & Data Scientist
+    <main>
+        <!-- TOPO DO SITE -->
+        <section class="topo-do-site" id="topo">
+            <div class="interface">
+                <div class="flex"> 
+                    <div class="txt-topo-site"> 
+                        <h1>InfiniteLoop – Criando, Codando, Evoluindo 🎡<span>.</span></h1>
+                        <p>
+                            Bem-vindo ao InfiniteLoop, meu espaço digital onde ideias ganham forma, código se transforma em experiência e criatividade nunca para! Sou Geovana, desenvolvedora <strong>Full Stack (PHP MVC, JavaScript, SQL)</strong> e pesquisadora em <strong>Ciência de Dados & Inteligência Artificial</strong>.
+                        </p>
+                        <p>
+                            Aqui, compartilho projetos, exploro novas tecnologias e crio soluções que unem funcionalidade, robustez arquitetural e estética. Assim como uma roda-gigante, estou sempre em movimento, aprendendo e evoluindo. 🚀
+                        </p>
+                        <div class="btn-contato"> 
+                            <a href="#portfolio"><button>Explorar Projetos</button></a>
+                        </div>
+                    </div><!--txt-topo-site-->
+                    
+                    <div class="img-topo-site">
+                        <img src="images/taesan.webp" alt="Foto Geovana">
+                    </div><!--img-topo-site-->
+                </div><!--flex-->
+            </div><!--interface-->
+        </section><!--topo-do-site-->
+
+        <!-- MINHAS ESPECIALIDADES -->
+        <section class="especialidades" id="especialidades"> 
+            <div class="interface"> 
+                <h2 class="titulo">MINHAS <span>ESPECIALIDADES.</span></h2>
+                <div class="flex">
+                    <div class="especialidades-box"> 
+                        <i class="bi bi-code-square"></i>
+                        <h3>FULL STACK & MVC</h3>
+                        <p>Desenvolvimento web estruturado com PHP (arquitetura MVC), JavaScript moderno, HTML5/CSS3 responsivo, bancos relacionais (MySQL/PostgreSQL) e APIs REST.</p>
+                    </div><!--especialidades-box-->
+                
+                    <div class="especialidades-box"> 
+                        <i class="bi bi-cpu"></i>
+                        <h3>CIÊNCIA DE DADOS & IA</h3>
+                        <p>Pipelines em Python, Scikit-Learn, modelos de regressão/classificação, séries temporais com lag e análise espacial GIS/GTFS.</p>
+                    </div><!--especialidades-box-->
+
+                    <div class="especialidades-box"> 
+                        <i class="bi bi-graph-up-arrow"></i>
+                        <h3>ECONOMETRIA & ANALYTICS</h3>
+                        <p>Testes de hipóteses estatísticas, índices distributivos de Gini, exploração de microdados governamentais e dashboards analíticos interativos.</p>
+                    </div><!--especialidades-box-->
+                </div><!--flex-->
+            </div><!--interface-->
+        </section><!--especialidades-->
+
+        <!-- SOBRE MIM -->
+        <section class="sobre" id="sobre"> 
+            <div class="interface">
+                <div class="flex">
+                    <div class="img-sobre"> 
+                        <img src="images/taesan.webp" alt="Foto Geovana">
+                    </div><!--img sobre-->
+      
+                    <div class="txt-sobre">
+                        <h2>MUITO PRAZER, <span>SOU GEOVANA...</span></h2>
+                        <p>
+                            Geovana é uma desenvolvedora apaixonada por tecnologia e inovação, com atuação tanto no desenvolvimento Full Stack tradicional quanto na vanguarda da Ciência de Dados e Inteligência Artificial.
+                        </p>
+                        <p>
+                            Com um olhar atento para design, arquitetura de software (MVC) e performance, ela se dedica a criar soluções que conectam estética apurada à robustez computacional.
+                        </p>
+                        <p>
+                            Sempre explorando novas ferramentas, frameworks e métodos científicos para transformar dados brutos e lógica em produtos reais de alto impacto.
+                        </p>
+
+                        <div class="btn-sobre">
+                            <a href="https://github.com/Geovana28" target="_blank" title="GitHub"><button><i class="bi bi-github"></i></button></a>
+                            <a href="https://linkedin.com" target="_blank" title="LinkedIn"><button><i class="bi bi-linkedin"></i></button></a>
+                            <a href="#contato" title="Mensagem"><button><i class="bi bi-envelope-fill"></i></button></a>
+                        </div><!--btn sobre-->
+                    </div><!--txt sobre-->
+                </div><!--flex-->
+            </div><!--interface-->
+        </section><!--sobre-->
+
+        <!-- PORTFÓLIO / PROJETOS -->
+        <section class="portifolio" id="portfolio">
+            <div class="interface">
+                <h2 class="titulo">MEU <span>PORTFÓLIO.</span></h2>
+                <div class="flex">
+                    
+                    <!-- Projeto 1: BH Transit AI -->
+                    <div class="card-projeto">
+                        <div class="img-port" style="background-image: url('images/BOYNEXTDOOR.jpg');">
+                            <div class="overlay">BH Transit AI 🚌</div>
+                        </div>
+                        <div class="card-info">
+                            <h3>BH Transit AI</h3>
+                            <p>Plataforma de inteligência espaço-temporal para mobilidade urbana em BH, modelagem de atrasos por intempéries e cálculo do índice TRI com GTFS.</p>
+                            <div class="card-tags">
+                                <span>Python</span>
+                                <span>ML</span>
+                                <span>GIS</span>
+                                <span>Streamlit</span>
+                            </div>
+                            <a href="https://github.com/Geovana28/bh-transit-ai" target="_blank" class="btn-repo">
+                                <i class="bi bi-github"></i> Ver no GitHub
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Projeto 2: Dengue Surveillance AI -->
+                    <div class="card-projeto">
+                        <div class="img-port" style="background-image: url('images/★.jpg');">
+                            <div class="overlay">Dengue Surveillance 🦟</div>
+                        </div>
+                        <div class="card-info">
+                            <h3>Dengue Surveillance AI</h3>
+                            <p>Vigilância epidemiológica preditiva, correlação meteorológica e análise espaço-temporal para contenção de surtos de dengue.</p>
+                            <div class="card-tags">
+                                <span>Python</span>
+                                <span>EDA</span>
+                                <span>Epidemiologia</span>
+                                <span>Pandas</span>
+                            </div>
+                            <a href="https://github.com/Geovana28/dengue" target="_blank" class="btn-repo">
+                                <i class="bi bi-github"></i> Ver no GitHub
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Projeto 3: EduData Analytics -->
+                    <div class="card-projeto">
+                        <div class="img-port" style="background-image: url('images/SEEUNSWRLD.jpg');">
+                            <div class="overlay">EduData Analytics 📊</div>
+                        </div>
+                        <div class="card-info">
+                            <h3>EduData Analytics</h3>
+                            <p>Painel econométrico interativo explorando disparidades socioeconômicas no ENEM integradas a microdados do IBGE (Índice de Gini).</p>
+                            <div class="card-tags">
+                                <span>JavaScript</span>
+                                <span>Chart.js</span>
+                                <span>Econometria</span>
+                                <span>HTML/CSS</span>
+                            </div>
+                            <a href="https://github.com/Geovana28/edudata-analytics" target="_blank" class="btn-repo">
+                                <i class="bi bi-github"></i> Ver no GitHub
+                            </a>
+                        </div>
+                    </div>
+
+                </div><!--flex-->
+            </div><!--interface-->
+        </section><!--portifolio-->
+
+        <!-- CONTATO -->
+        <section class="formulario" id="contato">
+            <div class="interface">
+                <h2 class="titulo">FALA <span>COMIGO.</span></h2>
+                <form action="https://formsubmit.co/geovana" method="POST">
+                    <input type="text" name="nome" id="nome" placeholder="Seu nome completo:" required>
+                    <input type="email" name="email" id="email" placeholder="Seu e-mail:" required>
+                    <textarea name="mensagem" placeholder="Sua mensagem..." required></textarea>
+                    <div class="btn-enviar">
+                        <input type="submit" value="Enviar Mensagem">
+                    </div>
+                </form>
+            </div><!--interface-->
+        </section><!--formulario-->
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <div class="interface">
+            <p>© 2026 InfiniteLoop • Criado por Geovana.</p>
+            <p>Full Stack Developer & Data Scientist</p>
         </div>
-        <h1 class="hero-title">
-          Desenvolvimento <span>Full Stack</span> & Ciência de Dados
-        </h1>
-        <p class="hero-subtitle">
-          Construindo arquiteturas de software escaláveis (PHP MVC, JavaScript, Bancos de Dados) combinadas com inteligência artificial, análise espaço-temporal e modelagem econométrica.
-        </p>
-        <div class="hero-actions">
-          <a href="#projects" class="btn btn-primary">
-            <i data-lucide="layers"></i> Ver Projetos
-          </a>
-          <a href="https://github.com/Geovana28" target="_blank" class="btn btn-outline">
-            <i data-lucide="external-link"></i> Perfil no GitHub
-          </a>
-        </div>
+    </footer>
 
-        <div class="hero-stats">
-          <div class="stat-box glass">
-            <div class="stat-number">Full Stack</div>
-            <div class="stat-label">PHP • MVC • JS • SQL</div>
-          </div>
-          <div class="stat-box glass">
-            <div class="stat-number">AI & Data</div>
-            <div class="stat-label">Python • ML • GIS</div>
-          </div>
-          <div class="stat-box glass">
-            <div class="stat-number">Open Source</div>
-            <div class="stat-label">Código Limpo & Testes</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- Projects Section -->
-  <section id="projects">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Portfólio de Projetos</span>
-        <h2 class="section-title">Projetos em Destaque</h2>
-        <p class="section-desc">
-          Aplicações integrando desenvolvimento web full stack, pipelines de dados, modelagem preditiva e arquiteturas robustas.
-        </p>
-      </div>
-
-      <div class="projects-grid">
-        
-        <!-- Projeto 1: BH Transit AI -->
-        <div class="project-card glass">
-          <div class="project-header">
-            <div class="project-icon icon-blue">
-              <i data-lucide="bus"></i>
-            </div>
-            <div class="project-badges">
-              <span class="badge">Machine Learning</span>
-              <span class="badge">GTFS / GIS</span>
-            </div>
-          </div>
-          <div class="project-body">
-            <h3 class="project-title">BH Transit AI</h3>
-            <p class="project-desc">
-              Plataforma de inteligência espaço-temporal para mobilidade urbana em Belo Horizonte. Modela atrasos sob intempéries climáticas, calcula o Transit Reliability Index (TRI) e integra assistente em linguagem natural.
-            </p>
-            <div class="project-metrics">
-              <span>Métricas & Destaque:</span>
-              <strong>Random Forest Regressor • Lag Temporal (&tau;=2h) • Graph Routing</strong>
-            </div>
-            <div class="project-tags">
-              <span class="tag">Python</span>
-              <span class="tag">Streamlit</span>
-              <span class="tag">Folium</span>
-              <span class="tag">Scikit-Learn</span>
-              <span class="tag">Pytest</span>
-            </div>
-          </div>
-          <div class="project-footer">
-            <a href="https://github.com/Geovana28/bh-transit-ai" target="_blank" class="link-btn">
-              Ver Código no GitHub <i data-lucide="arrow-right"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Projeto 2: Dengue Surveillance AI -->
-        <div class="project-card glass">
-          <div class="project-header">
-            <div class="project-icon icon-red">
-              <i data-lucide="activity"></i>
-            </div>
-            <div class="project-badges">
-              <span class="badge">Epidemiologia</span>
-              <span class="badge">Séries Temporais</span>
-            </div>
-          </div>
-          <div class="project-body">
-            <h3 class="project-title">Dengue Surveillance AI</h3>
-            <p class="project-desc">
-              Vigilância epidemiológica preditiva e análise espaço-temporal de surtos de dengue. Correlaciona variáveis meteorológicas, índices de infestação e projeções de risco para suporte a tomadas de decisão em saúde pública.
-            </p>
-            <div class="project-metrics">
-              <span>Métricas & Destaque:</span>
-              <strong>Análise Espacial • Previsão de Risco • Relatórios Automatizados</strong>
-            </div>
-            <div class="project-tags">
-              <span class="tag">Python</span>
-              <span class="tag">Pandas</span>
-              <span class="tag">EDA</span>
-              <span class="tag">Machine Learning</span>
-              <span class="tag">Data Viz</span>
-            </div>
-          </div>
-          <div class="project-footer">
-            <a href="https://github.com/Geovana28/dengue" target="_blank" class="link-btn">
-              Ver Código no GitHub <i data-lucide="arrow-right"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Projeto 3: EduData Analytics -->
-        <div class="project-card glass">
-          <div class="project-header">
-            <div class="project-icon icon-green">
-              <i data-lucide="graduation-cap"></i>
-            </div>
-            <div class="project-badges">
-              <span class="badge">Econometria</span>
-              <span class="badge">Políticas Públicas</span>
-            </div>
-          </div>
-          <div class="project-body">
-            <h3 class="project-title">EduData Analytics</h3>
-            <p class="project-desc">
-              Painel analítico explorando desigualdades socioeconômicas no ENEM integradas a indicadores do IBGE. Contém cálculo do Índice de Gini Educacional, gap público vs. privado e simulador interativo de políticas públicas.
-            </p>
-            <div class="project-metrics">
-              <span>Métricas & Destaque:</span>
-              <strong>Índice de Gini • 5.000+ Microdados • Simulador de Impacto</strong>
-            </div>
-            <div class="project-tags">
-              <span class="tag">JavaScript ES6</span>
-              <span class="tag">Chart.js</span>
-              <span class="tag">HTML5/CSS3</span>
-              <span class="tag">Econometrics</span>
-            </div>
-          </div>
-          <div class="project-footer">
-            <a href="https://github.com/Geovana28/edudata-analytics" target="_blank" class="link-btn">
-              Ver Código no GitHub <i data-lucide="arrow-right"></i>
-            </a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills" style="background: rgba(17, 24, 39, 0.4);">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Competências & Tecnologias</span>
-        <h2 class="section-title">Habilidades & Domínios Técnicos</h2>
-      </div>
-
-      <div class="skills-grid">
-        <div class="skill-card glass">
-          <div class="skill-icon">🌐</div>
-          <h3>Full Stack & Arquitetura MVC</h3>
-          <p>Desenvolvimento web estruturado com <strong>PHP (MVC)</strong>, JavaScript (ES6+), CSS3 moderno, integração com bancos relacionais (MySQL/PostgreSQL) e APIs RESTful.</p>
-        </div>
-
-        <div class="skill-card glass">
-          <div class="skill-icon">🤖</div>
-          <h3>Machine Learning & IA</h3>
-          <p>Pipelines de aprendizado supervisionado em <strong>Python</strong>, Scikit-Learn, regressão, classificação de risco, engenharia de atributos temporais e validação cruzada.</p>
-        </div>
-
-        <div class="skill-card glass">
-          <div class="skill-icon">🛰️</div>
-          <h3>GIS & Análise Espaço-Temporal</h3>
-          <p>Modelagem de redes de transporte, processamento de feeds GTFS, análise geográfica e correlação de séries temporais com dados ambientais.</p>
-        </div>
-
-        <div class="skill-card glass">
-          <div class="skill-icon">📊</div>
-          <h3>Econometria & Dashboards</h3>
-          <p>Testes de hipóteses estatísticas, cálculo de desigualdade (Gini), visualização de dados (Chart.js, Folium, Streamlit) e práticas de CI/CD (GitHub Actions).</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="footer-links">
-        <a href="https://github.com/Geovana28" target="_blank"><i data-lucide="github"></i> GitHub</a>
-        <a href="#about"><i data-lucide="arrow-up-circle"></i> Voltar ao Topo</a>
-      </div>
-      <p>© 2026 Geovana • Full Stack Developer & Data Scientist. Hospedado via GitHub Pages.</p>
-    </div>
-  </footer>
-
-  <script>
-    // Initialize Lucide icons
-    lucide.createIcons();
-  </script>
 </body>
 </html>
