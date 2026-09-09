@@ -19,6 +19,7 @@
 - **🚌 BH Transit AI:** Plataforma de inteligência espaço-temporal para mobilidade urbana, modelagem de atrasos climáticos e integração com GTFS.
 - **🦟 Dengue Surveillance AI:** Vigilância epidemiológica preditiva e análise espaço-temporal de surtos de dengue com correlação meteorológica.
 - **📊 EduData Analytics:** Painel econométrico de análise de desigualdade educacional no ENEM cruzado com microdados do IBGE.
+- **🦠 COVID-19 Intelligence:** Vigilância temporal de variantes, impacto causal da vacinação e simulação matemática de intervenções (Modelo SIR).
 
 ---
 
