@@ -16,10 +16,10 @@
 
 ## 🚀 Projetos em Destaque
 
-- **🚌 BH Transit AI:** Plataforma de inteligência espaço-temporal para mobilidade urbana, modelagem de atrasos climáticos e integração com GTFS.
-- **🦟 Dengue Surveillance AI:** Vigilância epidemiológica preditiva e análise espaço-temporal de surtos de dengue com correlação meteorológica.
-- **📊 EduData Analytics:** Painel econométrico de análise de desigualdade educacional no ENEM cruzado com microdados do IBGE.
-- **🦠 COVID-19 Intelligence:** Vigilância temporal de variantes, impacto causal da vacinação e simulação matemática de intervenções (Modelo SIR).
+- **BH Transit AI:** Análise espaço-temporal do transporte público de Belo Horizonte (GTFS) cruzado com clima em tempo real para modelagem preditiva de atrasos e confiabilidade operacional (índice TRI).
+- **Dengue Surveillance AI:** Vigilância epidemiológica preditiva nas capitais brasileiras, com modelos de defasagem climática (lag de temperatura/precipitação) e análise espacial.
+- **EduData Analytics:** Painel analítico explorando desigualdades educacionais no ENEM correlacionadas a microdados do IBGE (Índice de Gini) e simulação de intervenções escolares.
+- **COVID-19 Intelligence:** Vigilância das ondas de variantes (Gama, Delta, Ômicron), avaliação causal da cobertura vacinal e simulador dinâmico baseado em equações diferenciais (Modelo SIR).
 
 ---
 
