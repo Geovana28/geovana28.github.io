@@ -243,7 +243,8 @@
 
                 <!-- Category Filters -->
                 <div class="portfolio-filters reveal" id="portfolioFilters">
-                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn active" data-filter="all">Todos (18)</button>
+                    <button class="filter-btn" data-filter="flagship">⭐ Destaques IA (Flagships)</button>
                     <button class="filter-btn" data-filter="datascience">🧬 Data Science & IA</button>
                     <button class="filter-btn" data-filter="simulacao">🔬 Simulações Matemáticas</button>
                     <button class="filter-btn" data-filter="dashboard">📊 Dashboards</button>
@@ -253,39 +254,10 @@
 
                 <div class="projects-grid">
 
-                    <!-- ====== DATA SCIENCE, CLOUD & BI ====== -->
+                    <!-- ====== FLAGSHIP AI & DATA SCIENCE ====== -->
 
-                    <div class="project-card reveal delay-1" data-category="datascience">
-                        <div class="project-img" style="background-image: url('images/project_lakehouse.jpg'); background-color: #0f172a;">
-                            <div class="project-overlay">
-                                <span>GCP Lakehouse</span>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <div style="display: flex; gap: 6px; align-items: center; margin-bottom: 6px;">
-                                <span style="background: rgba(14, 165, 233, 0.15); color: #38bdf8; border: 1px solid rgba(14, 165, 233, 0.3); font-size: 0.68rem; font-weight: 700; padding: 2px 7px; border-radius: 4px;">CLOUD & LAKEHOUSE</span>
-                            </div>
-                            <h3>GCP Ecommerce Modern Data Platform</h3>
-                            <p>Plataforma analítica ponta a ponta na GCP (Medallion Architecture: Bronze/Silver/Gold). Ingestão no Cloud Storage, modelagem dimensional no BigQuery (Star Schema), views de alta performance para Looker Studio e laboratório de ML no Google Colab.</p>
-                            <div class="project-tags">
-                                <span>GCP BigQuery</span><span>Cloud Storage</span><span>Looker Studio</span><span>Google Colab</span><span>Python / SQL</span>
-                            </div>
-                            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-                                <a href="https://github.com/Geovana28/gcp-ecommerce-lakehouse" target="_blank" class="btn-repo">
-                                    <i class="bi bi-github"></i> Ver no GitHub
-                                </a>
-                                <a href="https://geovana28.github.io/gcp-ecommerce-lakehouse/docs/" target="_blank" class="btn-repo btn-demo">
-                                    <i class="bi bi-box-arrow-up-right"></i> Live Demo
-                                </a>
-                                <a href="https://colab.research.google.com/github/Geovana28/gcp-ecommerce-lakehouse/blob/main/notebooks/01_ecommerce_analytics_colab.ipynb" target="_blank" class="btn-repo" style="border-color: #f59e0b; color: #fbbf24;">
-                                    <i class="bi bi-cpu"></i> Colab
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card reveal delay-1" data-category="datascience">
-                        <div class="project-img" style="background-image: url('images/project_rag_stat.jpg')">
+                    <div class="project-card reveal delay-1" data-category="datascience" data-flagship="true">
+                        <div class="project-img" style="background-image: url('images/project_rag_stat.jpg'); background-size: cover; background-position: top center;">
                             <div class="project-overlay">
                                 <span>RAG Stat Eval</span>
                             </div>
@@ -310,8 +282,8 @@
                         </div>
                     </div>
 
-                    <div class="project-card reveal delay-1" data-category="datascience">
-                        <div class="project-img" style="background-image: url('images/project_transit.jpg')">
+                    <div class="project-card reveal delay-1" data-category="datascience" data-flagship="true">
+                        <div class="project-img" style="background-image: url('images/project_transit.jpg'); background-size: cover; background-position: top center;">
                             <div class="project-overlay">
                                 <span>BH Transit AI</span>
                             </div>
@@ -336,8 +308,8 @@
                         </div>
                     </div>
 
-                    <div class="project-card reveal delay-2" data-category="datascience">
-                        <div class="project-img" style="background-image: url('images/project_f1.jpg'); background-color: #0f172a;">
+                    <div class="project-card reveal delay-1" data-category="datascience" data-flagship="true">
+                        <div class="project-img" style="background-image: url('images/project_f1.jpg'); background-size: cover; background-position: top center;">
                             <div class="project-overlay">
                                 <span>F1 Global Pit-Wall AI</span>
                             </div>
@@ -347,9 +319,9 @@
                                 <span style="background: rgba(0, 210, 190, 0.15); color: #00d2be; border: 1px solid rgba(0, 210, 190, 0.35); font-size: 0.68rem; font-weight: 700; padding: 2px 7px; border-radius: 4px;">MOTORSPORT AI • 24 CIRCUITS & 10 TEAMS</span>
                             </div>
                             <h3>F1 Global Pit-Wall Telemetry & Car Setup AI</h3>
-                            <p>Plataforma global de engenharia de corrida para todos os 24 circuitos do calendário mundial e todas as 10 equipes do grid: detecção automática do próximo GP, setup mecânico/aerodinâmico (Asa, Ride Height, ERS), física barométrica de altitude, clima ao vivo via Open-Meteo e otimizador de Undercut.</p>
+                            <p>Plataforma global de engenharia de corrida para todos os 24 circuitos do calendário mundial e todas as 10 equipes do grid: detecção automática do próximo GP, setup mecânico/aerodinâmico (Asa, Ride Height, ERS), Monte Carlo de Safety Car, crossover de chuva e Engenheiro de Box com Tool Calling.</p>
                             <div class="project-tags">
-                                <span>Python</span><span>24 Circuits & 10 Teams</span><span>Car Setup Physics</span><span>Open-Meteo API</span><span>Pytest</span>
+                                <span>Python</span><span>24 Circuits & 10 Teams</span><span>Car Setup Physics</span><span>Monte Carlo SC</span><span>Tool Calling</span>
                             </div>
                             <div style="display: flex; gap: 8px; flex-wrap: wrap;">
                                 <a href="https://github.com/Geovana28/f1-pitwall-ai" target="_blank" class="btn-repo">
@@ -357,6 +329,35 @@
                                 </a>
                                 <a href="https://geovana28.github.io/f1-pitwall-ai/" target="_blank" class="btn-repo btn-demo">
                                     <i class="bi bi-box-arrow-up-right"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card reveal delay-2" data-category="datascience" data-flagship="true">
+                        <div class="project-img" style="background-image: url('images/project_lakehouse.jpg'); background-size: cover; background-position: top center;">
+                            <div class="project-overlay">
+                                <span>GCP Lakehouse</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div style="display: flex; gap: 6px; align-items: center; margin-bottom: 6px;">
+                                <span style="background: rgba(14, 165, 233, 0.15); color: #38bdf8; border: 1px solid rgba(14, 165, 233, 0.3); font-size: 0.68rem; font-weight: 700; padding: 2px 7px; border-radius: 4px;">CLOUD & LAKEHOUSE</span>
+                            </div>
+                            <h3>GCP Ecommerce Modern Data Platform</h3>
+                            <p>Plataforma analítica ponta a ponta na GCP (Medallion Architecture: Bronze/Silver/Gold). Ingestão no Cloud Storage, modelagem dimensional no BigQuery (Star Schema), views de alta performance para Looker Studio e laboratório de ML no Google Colab.</p>
+                            <div class="project-tags">
+                                <span>GCP BigQuery</span><span>Cloud Storage</span><span>Looker Studio</span><span>Google Colab</span><span>Python / SQL</span>
+                            </div>
+                            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                                <a href="https://github.com/Geovana28/gcp-ecommerce-lakehouse" target="_blank" class="btn-repo">
+                                    <i class="bi bi-github"></i> Ver no GitHub
+                                </a>
+                                <a href="https://geovana28.github.io/gcp-ecommerce-lakehouse/docs/" target="_blank" class="btn-repo btn-demo">
+                                    <i class="bi bi-box-arrow-up-right"></i> Live Demo
+                                </a>
+                                <a href="https://colab.research.google.com/github/Geovana28/gcp-ecommerce-lakehouse/blob/main/notebooks/01_ecommerce_analytics_colab.ipynb" target="_blank" class="btn-repo" style="border-color: #f59e0b; color: #fbbf24;">
+                                    <i class="bi bi-cpu"></i> Colab
                                 </a>
                             </div>
                         </div>
@@ -389,7 +390,7 @@
                     </div>
 
                     <div class="project-card reveal delay-3" data-category="datascience">
-                        <div class="project-img" style="background-image: url('images/project_dengue.jpg'); filter: hue-rotate(180deg);">
+                        <div class="project-img" style="background-image: url('images/project_covid.jpg'); background-size: cover; background-position: top center;">
                             <div class="project-overlay">
                                 <span>COVID-19 Intelligence</span>
                             </div>
@@ -927,7 +928,10 @@
                     const filter = btn.dataset.filter;
 
                     projectCards.forEach(card => {
-                        if (filter === 'all' || card.dataset.category === filter) {
+                        const isMatch = filter === 'all'
+                            || card.dataset.category === filter
+                            || (filter === 'flagship' && card.dataset.flagship === 'true');
+                        if (isMatch) {
                             card.style.display = '';
                             card.style.opacity = '0';
                             card.style.transform = 'translateY(20px)';
