@@ -16,13 +16,15 @@
 
 ## 🚀 Projetos em Destaque (Flagships)
 
-- **RAG Statistical Evaluation Suite (`rag-stat-eval`):** Framework de avaliação estatística rigorosa para sistemas RAG/LLMs com teste pareado de McNemar (correção de Edwards), análise de poder estatístico, Bootstrap não-paramétrico ($B=2.000$), calibração ECE/MCE, degradação controlada por ruído e auditoria de equidade (Regra dos 4/5).
+- **RAG Statistical Evaluation Suite (`rag-stat-eval`):** Pipeline RAG real integrado à API Gemini sobre políticas logísticas + framework de avaliação estatística rigorosa com teste pareado de McNemar (correção de Edwards), análise de poder estatístico ($1-\beta$), Bootstrap não-paramétrico ($B=2.000$), calibração ECE/MCE, concordância LLM-as-Judge (Kappa de Cohen $\kappa$) e auditoria de equidade (Regra dos 4/5).
+- **BH Transit AI (`bh-transit-ai`):** Mobilidade urbana espaço-temporal em Belo Horizonte (GTFS + Open-Meteo em tempo real) com Agente LLM de *Tool Calling* e guardrails anti-alucinação (Gemini API + FastAPI), Random Forest avaliado contra baseline, cobertura empírica de *Split Conformal Prediction* e monitoramento de *Data Drift* (PSI/KS-Test).
 - **GCP Ecommerce Lakehouse (`gcp-ecommerce-lakehouse`):** Plataforma analítica na Google Cloud Platform utilizando Arquitetura Medalhão (Bronze/Silver/Gold) no BigQuery e Cloud Storage, modelagem dimensional (Star Schema), suíte automatizada de qualidade de dados e laboratório de ML no Google Colab.
 - **Dengue Surveillance AI (`dengue`):** Vigilância epidemiológica preditiva nas capitais brasileiras com Nowcasting Empírico Bayesiano, avaliação retrospectiva (*backtesting* com MAE/RMSE), correlação espaço-temporal com defasagem climática (*lag*) e integração com InfoDengue/Open-Meteo.
-- **BH Transit AI (`bh-transit-ai`):** Mobilidade urbana espaço-temporal em Belo Horizonte (GTFS + Open-Meteo em tempo real) com regressão/classificação via Random Forest avaliada contra baseline, cobertura empírica de *Split Conformal Prediction* (90%) e índice de confiabilidade operacional (TRI).
-- **Triagem Clínica IA (`triagem-ia`):** Protótipo de apoio à decisão clínica baseado nas diretrizes NEWS2 e Sistema de Triagem de Manchester, com otimização de limiar sob perda clínica assimétrica e atribuição local de variáveis fisiológicas.
+- **Triagem Clínica IA (`triagem-ia`):** Protótipo de apoio à decisão clínica baseado nos limiares do NEWS2 e Sistema de Triagem de Manchester, com otimização de limiar sob perda clínica assimétrica, atribuição local de variáveis fisiológicas e suíte `pytest`.
 - **EduData Analytics (`edudata-analytics`):** Painel econométrico interativo explorando desigualdades educacionais no ENEM e indicadores do IBGE via regressão múltipla OLS, importância de atributos por Random Forest, índice de Gini e simulador de investimentos em infraestrutura escolar.
 - **COVID-19 Intelligence (`covid`):** Vigilância espaço-temporal das ondas epidemiológicas no Brasil e no mundo, análise temporal da cobertura vacinal e simulador dinâmico baseado em EDOs (Modelo SIR e Crescimento Logístico de Verhulst).
+- **Sudoku Challenge App (`sudoku-sqlite-app`):** Aplicativo mobile em React Native (Expo / TypeScript) com validação algorítmica de tabuleiros $9\times 9$ e persistência relacional em SQLite.
+- **Tarot Interactive App (`tarot-app`):** Aplicação interativa em React e JavaScript ES6+ com animações CSS3 e gerenciamento de estado.
 
 ---
 

@@ -158,7 +158,7 @@
                         </p>
                         <div class="sobre-stats">
                             <div class="stat-item">
-                                <span class="stat-number">15</span>
+                                <span class="stat-number">17</span>
                                 <span class="stat-label">Projetos em Produção</span>
                             </div>
                             <div class="stat-item">
@@ -251,6 +251,7 @@
                     <button class="filter-btn" data-filter="simulacao">🔬 Simulações Matemáticas</button>
                     <button class="filter-btn" data-filter="dashboard">📊 Dashboards</button>
                     <button class="filter-btn" data-filter="financas">💰 Finanças</button>
+                    <button class="filter-btn" data-filter="fullstack">📱 Apps & React</button>
                 </div>
 
                 <div class="projects-grid">
@@ -294,12 +295,12 @@
                         </div>
                         <div class="project-info">
                             <div style="display: flex; gap: 6px; align-items: center; margin-bottom: 6px;">
-                                <span style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); font-size: 0.68rem; font-weight: 700; padding: 2px 7px; border-radius: 4px;">FLAGSHIP AI</span>
+                                <span style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); font-size: 0.68rem; font-weight: 700; padding: 2px 7px; border-radius: 4px;">FLAGSHIP AI • GEMINI RAG</span>
                             </div>
                             <h3>RAG Statistical Evaluation Suite</h3>
-                            <p>Suíte formal de estresse estatístico para LLMs/RAG: calibração de incerteza (ECE/MCE), teste de hipótese (McNemar/Bootstrap), robustez a ruído sintético e auditoria de equidade (Regra 4/5).</p>
+                            <p>Pipeline RAG real na API Gemini sobre políticas logísticas + suíte de validação estatística: teste pareado de McNemar, poder estatístico (1−β), Bootstrap, calibração ECE/MCE e acordo LLM-as-Judge (Kappa de Cohen).</p>
                             <div class="project-tags">
-                                <span>Python</span><span>SciPy</span><span>ECE / MCE</span><span>Bootstrap</span><span>Chart.js</span>
+                                <span>Python</span><span>Gemini API</span><span>McNemar / Bootstrap</span><span>ECE / MCE</span><span>Pytest & CI</span>
                             </div>
                             <div style="display: flex; gap: 8px; flex-wrap: wrap;">
                                 <a href="https://github.com/Geovana28/rag-stat-eval" target="_blank" class="btn-repo">
@@ -319,10 +320,13 @@
                             </div>
                         </div>
                         <div class="project-info">
+                            <div style="display: flex; gap: 6px; align-items: center; margin-bottom: 6px;">
+                                <span style="background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); font-size: 0.68rem; font-weight: 700; padding: 2px 7px; border-radius: 4px;">LLM AGENT • TOOL CALLING</span>
+                            </div>
                             <h3>BH Transit AI</h3>
-                            <p>Mobilidade urbana espaço-temporal em BH: Random Forest avaliado contra baseline, intervalos via Split Conformal Prediction (cobertura empírica medida ≈85% vs. 90% nominal), detector de Data Drift (PSI/KS-Test), GTFS e índice TRI.</p>
+                            <p>Mobilidade urbana espaço-temporal em BH: Agente LLM com Tool Calling e guardrails (Gemini API + FastAPI), Random Forest vs. baseline, Split Conformal Prediction, detector de Data Drift (PSI/KS-Test) e GTFS.</p>
                             <div class="project-tags">
-                                <span>Python</span><span>Conformal Prediction</span><span>Data Drift</span><span>GTFS</span>
+                                <span>Python</span><span>Gemini Tool Calling</span><span>Conformal Prediction</span><span>FastAPI</span><span>GTFS</span>
                             </div>
                             <div style="display: flex; gap: 8px; flex-wrap: wrap;">
                                 <a href="https://github.com/Geovana28/bh-transit-ai" target="_blank" class="btn-repo">
@@ -614,6 +618,54 @@
                                     <i class="bi bi-github"></i> Ver no GitHub
                                 </a>
                                 <a href="https://geovana28.github.io/calculadora-fire/" target="_blank" class="btn-repo btn-demo">
+                                    <i class="bi bi-box-arrow-up-right"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ====== APPS & REACT ====== -->
+
+                    <div class="project-card reveal delay-1" data-category="fullstack">
+                        <div class="project-img" style="background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #0f172a 100%);">
+                            <div class="project-overlay">
+                                <span>Sudoku Mobile & SQLite</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div style="display: flex; gap: 6px; align-items: center; margin-bottom: 6px;">
+                                <span style="background: rgba(168, 85, 247, 0.15); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.3); font-size: 0.68rem; font-weight: 700; padding: 2px 7px; border-radius: 4px;">REACT NATIVE • SQLITE</span>
+                            </div>
+                            <h3>Sudoku Challenge App (React Native + SQLite)</h3>
+                            <p>Aplicativo mobile em React Native (Expo / TypeScript) com geração e validação algorítmica de tabuleiros 9×9 em múltiplos níveis de dificuldade, autenticação local, cadastro de desafios e persistência relacional em SQLite.</p>
+                            <div class="project-tags">
+                                <span>React Native</span><span>TypeScript</span><span>Expo</span><span>SQLite</span><span>Algoritmos</span>
+                            </div>
+                            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                                <a href="https://github.com/Geovana28/sudoku-sqlite-app" target="_blank" class="btn-repo">
+                                    <i class="bi bi-github"></i> Ver no GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card reveal delay-2" data-category="fullstack">
+                        <div class="project-img" style="background: linear-gradient(135deg, #3b0764 0%, #1e1b4b 60%, #090d16 100%);">
+                            <div class="project-overlay">
+                                <span>Tarot Interactive App</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Tarot Interactive Web & React App</h3>
+                            <p>Aplicação interativa construída em React e JavaScript ES6+ com animações CSS3, gerenciamento de estado de tiragens de cartas e interface responsiva temática.</p>
+                            <div class="project-tags">
+                                <span>React</span><span>JavaScript ES6+</span><span>CSS3 Animations</span><span>UI/UX</span>
+                            </div>
+                            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                                <a href="https://github.com/Geovana28/tarot-app" target="_blank" class="btn-repo">
+                                    <i class="bi bi-github"></i> Ver no GitHub
+                                </a>
+                                <a href="https://geovana28.github.io/tarot-app/" target="_blank" class="btn-repo btn-demo">
                                     <i class="bi bi-box-arrow-up-right"></i> Live Demo
                                 </a>
                             </div>
