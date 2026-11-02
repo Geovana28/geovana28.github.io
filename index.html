@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=VT323&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Gaegu:wght@400;700&display=swap"
         rel="stylesheet">
 
     <!-- Icons -->
@@ -42,6 +42,11 @@
             </nav>
 
             <div class="header-actions">
+                <!-- Y2K Retro Mini Player Button -->
+                <button class="music-toggle-btn" id="musicToggleBtn" title="Tocar música Y2K lofi">
+                    <span class="music-note">♫</span>
+                    <span class="music-label">music: off</span>
+                </button>
                 <button class="hamburger" id="hamburger" aria-label="Menu">
                     <span></span>
                     <span></span>
@@ -70,23 +75,22 @@
             <div class="container">
                 <div class="hero-grid">
                     <div class="hero-text reveal">
-                        <p class="hero-greeting">Olá, meu nome é Geovana</p>
+                        <p class="hero-greeting">♡ hi there! meu nome é Geovana ★</p>
                         <h1>
                             <span class="typing-text" id="typing-target"></span>
-                            <span class="typing-cursor">|</span>
+                            <span class="typing-cursor">_</span>
                         </h1>
                         <p class="hero-desc">
-                            Bacharelanda em <strong>Ciência da Computação</strong> e Desenvolvedora <strong>Full Stack & AI Engineer</strong>.
-                            Construo e operacionalizo sistemas de <strong>Inteligência Artificial (LLMs, RAG, Agentes com Tool Calling)</strong>,
-                            pipelines de <strong>Engenharia de Dados na GCP (BigQuery)</strong> e aplicações web/mobile completas em
-                            <strong>Python, JavaScript/React e PHP (MVC)</strong> com validação estatística rigorosa e testes automatizados.
+                            Bacharelanda em <strong>Ciência da Computação</strong> & <strong>AI Engineer</strong>.
+                            Construo sistemas de <strong>Inteligência Artificial (LLMs, RAG & Agentes com Tool Calling)</strong>,
+                            arquitetura de dados no <strong>Google Cloud (BigQuery)</strong> e engenharia com validação estatística e testes automatizados.
                         </p>
                         <div class="hero-ctas">
                             <a href="#portfolio" class="btn btn-primary">
-                                <i class="bi bi-folder-check"></i> Ver Projetos
+                                <i class="bi bi-stars"></i> Ver Projetos
                             </a>
                             <a href="#contato" class="btn btn-outline">
-                                <i class="bi bi-envelope"></i> Entrar em Contato
+                                <i class="bi bi-chat-heart"></i> Manda um Oi!
                             </a>
                         </div>
                         <div class="hero-socials">
@@ -95,14 +99,32 @@
                             <a href="https://www.linkedin.com/in/geovana-luiza-morais-moreira-200502317/"
                                 target="_blank" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
                             <a href="mailto:geovanalmm28@gmail.com" title="Email"><i
-                                    class="bi bi-envelope-fill"></i></a>
+                                    class="bi bi-envelope-heart"></i></a>
                         </div>
                     </div>
                     <div class="hero-avatar reveal delay-2">
-                        <div class="avatar-ring">
-                            <img src="images/avatar.jpg" alt="Geovana – Desenvolvedora de Software">
+                        <!-- Y2K Retro ID Window / Tamagotchi Card (Sem foto gerada por IA) -->
+                        <div class="y2k-id-card">
+                            <div class="y2k-id-header">
+                                <span class="y2k-dot red"></span>
+                                <span class="y2k-dot yellow"></span>
+                                <span class="y2k-dot green"></span>
+                                <span class="y2k-id-title">geovana_id.exe ♡</span>
+                            </div>
+                            <div class="y2k-id-body">
+                                <div class="y2k-avatar-placeholder" id="avatarArea">
+                                    <div class="y2k-cam-icon">📷</div>
+                                    <span class="y2k-name-tag">GEOVANA</span>
+                                    <span class="y2k-subtag">CS & AI BUILDER</span>
+                                </div>
+                                <div class="y2k-stats-mini">
+                                    <div class="y2k-stat-row"><span>STATUS:</span> <strong>ONLINE & CODING</strong></div>
+                                    <div class="y2k-stat-row"><span>ROLE:</span> <strong>AI ENGINEER</strong></div>
+                                    <div class="y2k-stat-row"><span>FAV:</span> <strong>F1 & LLMS</strong></div>
+                                    <div class="y2k-stat-row"><span>LEVEL:</span> <strong>18 PROJECTS READY</strong></div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="avatar-badge">Disponível para Projetos</div>
                     </div>
                 </div>
             </div>
@@ -137,7 +159,26 @@
             <div class="container">
                 <div class="sobre-grid">
                     <div class="sobre-img reveal">
-                        <img src="images/avatar.jpg" alt="Geovana">
+                        <!-- Y2K Aesthetic Passport / About Card (Sem foto gerada por IA) -->
+                        <div class="y2k-sticker-card">
+                            <div class="sticker-star">★</div>
+                            <div class="sticker-heart">♡</div>
+                            <div class="passport-header">
+                                <span class="passport-title">ABOUT ME // 2026</span>
+                            </div>
+                            <div class="passport-box">
+                                <div class="passport-photo-area">
+                                    <span class="pixel-avatar">✨👩‍💻</span>
+                                    <span class="photo-caption">future photo goes here!</span>
+                                </div>
+                                <div class="passport-meta">
+                                    <p><strong>NAME:</strong> Geovana</p>
+                                    <p><strong>LOCATION:</strong> MG, Brasil</p>
+                                    <p><strong>SPECIALTY:</strong> RAG & Agents</p>
+                                    <p><strong>OBSESSION:</strong> Formula 1 🏎️</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="sobre-text reveal delay-2">
                         <h2>MUITO PRAZER, <span>SOU A GEOVANA.</span></h2>
@@ -743,6 +784,29 @@
         <i class="bi bi-chevron-up"></i>
     </button>
 
+    <!-- ===== FLOATING Y2K WINAMP MUSIC PLAYER ===== -->
+    <div class="y2k-player" id="y2kPlayer">
+        <div class="player-top">
+            <span class="player-title">★ WINAMP - GEOVANA.MP3</span>
+            <button class="player-min-btn" id="playerCloseBtn" title="Fechar player">×</button>
+        </div>
+        <div class="player-body">
+            <div class="track-marquee">
+                <span id="playerTrackTitle">♫ NOW PLAYING: Y2K LO-FI DREAMS (GEOVANA'S PLAYLIST)</span>
+            </div>
+            <div class="player-controls">
+                <button class="ctrl-btn" id="playBtn" title="Play / Pause">▶ PLAY</button>
+                <div class="eq-bars">
+                    <span class="eq-bar b1"></span>
+                    <span class="eq-bar b2"></span>
+                    <span class="eq-bar b3"></span>
+                    <span class="eq-bar b4"></span>
+                </div>
+            </div>
+            <p class="player-hint">Cole o link da sua playlist do Spotify ou use o sintetizador integrado ♡</p>
+        </div>
+    </div>
+
     <!-- ===== SCRIPTS ===== -->
     <script>
         /* ==========================================
@@ -911,6 +975,7 @@
             setupBackToTop();
             setupHeaderScroll();
             setupPortfolioFilters();
+            setupY2KMusicPlayer();
 
             // Default view: filter to flagship projects right on page load
             const initialFlagships = document.querySelectorAll('.project-card[data-category]');
@@ -920,6 +985,95 @@
                 }
             });
         });
+
+        /* ==========================================
+           Y2K WINAMP RETRO CHIPTUNE / LOFI SYNTHESIZER
+           ========================================== */
+        function setupY2KMusicPlayer() {
+            const toggleBtn = document.getElementById('musicToggleBtn');
+            const playerModal = document.getElementById('y2kPlayer');
+            const playBtn = document.getElementById('playBtn');
+            const closeBtn = document.getElementById('playerCloseBtn');
+            const eqBars = document.querySelectorAll('.eq-bar');
+            let isPlaying = false;
+            let audioCtx = null;
+            let loopTimer = null;
+
+            function playNote(freq, start, duration) {
+                if (!audioCtx) return;
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.type = 'triangle'; // warm retro chiptune / lofi sound
+                osc.frequency.setValueAtTime(freq, start);
+                gain.gain.setValueAtTime(0.001, start);
+                gain.gain.exponentialRampToValueAtTime(0.045, start + 0.05);
+                gain.gain.exponentialRampToValueAtTime(0.0001, start + duration);
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+                osc.start(start);
+                osc.stop(start + duration);
+            }
+
+            function playChiptuneMelody() {
+                if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+                if (audioCtx.state === 'suspended') audioCtx.resume();
+
+                // Gentle Y2K dreamy pentatonic chord progression (Cmaj7 -> Am7 -> Fmaj7 -> G7)
+                const now = audioCtx.currentTime;
+                const melody = [
+                    { f: 523.25, d: 0.4 }, { f: 659.25, d: 0.4 }, { f: 783.99, d: 0.5 }, { f: 987.77, d: 0.6 },
+                    { f: 880.00, d: 0.4 }, { f: 783.99, d: 0.4 }, { f: 659.25, d: 0.5 }, { f: 523.25, d: 0.6 },
+                    { f: 698.46, d: 0.4 }, { f: 880.00, d: 0.4 }, { f: 1046.50, d: 0.5 }, { f: 880.00, d: 0.6 },
+                    { f: 783.99, d: 0.4 }, { f: 659.25, d: 0.4 }, { f: 587.33, d: 0.5 }, { f: 523.25, d: 0.8 },
+                ];
+
+                melody.forEach((note, idx) => {
+                    playNote(note.f, now + idx * 0.42, note.d);
+                });
+
+                loopTimer = setTimeout(playChiptuneMelody, melody.length * 420);
+            }
+
+            function startMusic() {
+                isPlaying = true;
+                playChiptuneMelody();
+                toggleBtn.classList.add('playing');
+                toggleBtn.querySelector('.music-label').textContent = 'music: playing ♫';
+                playBtn.textContent = '❚❚ PAUSE';
+                eqBars.forEach(b => b.classList.add('animating'));
+            }
+
+            function stopMusic() {
+                isPlaying = false;
+                if (loopTimer) clearTimeout(loopTimer);
+                if (audioCtx) audioCtx.suspend();
+                toggleBtn.classList.remove('playing');
+                toggleBtn.querySelector('.music-label').textContent = 'music: off';
+                playBtn.textContent = '▶ PLAY';
+                eqBars.forEach(b => b.classList.remove('animating'));
+            }
+
+            toggleBtn.addEventListener('click', () => {
+                playerModal.classList.toggle('visible');
+                if (!isPlaying) {
+                    startMusic();
+                } else if (!playerModal.classList.contains('visible')) {
+                    // Just toggle window visibility
+                }
+            });
+
+            playBtn.addEventListener('click', () => {
+                if (isPlaying) {
+                    stopMusic();
+                } else {
+                    startMusic();
+                }
+            });
+
+            closeBtn.addEventListener('click', () => {
+                playerModal.classList.remove('visible');
+            });
+        }
 
         /* ==========================================
            PORTFOLIO CATEGORY FILTERS
