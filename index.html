@@ -243,8 +243,8 @@
 
                 <!-- Category Filters -->
                 <div class="portfolio-filters reveal" id="portfolioFilters">
-                    <button class="filter-btn active" data-filter="all">Todos (18)</button>
-                    <button class="filter-btn" data-filter="flagship">⭐ Destaques IA (Flagships)</button>
+                    <button class="filter-btn active" data-filter="flagship">⭐ Destaques IA (Principais)</button>
+                    <button class="filter-btn" data-filter="all">Todos os Projetos (18)</button>
                     <button class="filter-btn" data-filter="datascience">🧬 Data Science & IA</button>
                     <button class="filter-btn" data-filter="simulacao">🔬 Simulações Matemáticas</button>
                     <button class="filter-btn" data-filter="dashboard">📊 Dashboards</button>
@@ -911,6 +911,14 @@
             setupBackToTop();
             setupHeaderScroll();
             setupPortfolioFilters();
+
+            // Default view: filter to flagship projects right on page load
+            const initialFlagships = document.querySelectorAll('.project-card[data-category]');
+            initialFlagships.forEach(card => {
+                if (card.dataset.flagship !== 'true') {
+                    card.style.display = 'none';
+                }
+            });
         });
 
         /* ==========================================
