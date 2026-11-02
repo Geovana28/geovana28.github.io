@@ -1004,23 +1004,42 @@
     <!-- ===== FLOATING Y2K WINAMP MUSIC PLAYER ===== -->
     <div class="y2k-player" id="y2kPlayer">
         <div class="player-top">
-            <span class="player-title">★ WINAMP - GEOVANA.MP3</span>
-            <button class="player-min-btn" id="playerCloseBtn" title="Fechar player">×</button>
+            <span class="player-title">★ WINAMP 2.91 - GEOVANA'S NOSTALGIA</span>
+            <div class="player-header-actions">
+                <button class="player-min-btn" id="playerCloseBtn" title="Fechar player">×</button>
+            </div>
         </div>
         <div class="player-body">
             <div class="track-marquee">
-                <span id="playerTrackTitle">♫ NOW PLAYING: Y2K LO-FI DREAMS (GEOVANA'S PLAYLIST)</span>
+                <span id="playerTrackTitle">♫ PLAYLIST: NOSTALGIA • YOUTUBE MUSIC 2000s</span>
             </div>
+
+            <!-- YouTube Music Iframe Wrapper -->
+            <div class="yt-embed-box" id="ytEmbedBox">
+                <iframe id="ytPlaylistIframe" 
+                    src="https://www.youtube.com/embed/videoseries?list=PL2gA9uBlkZIhdnqNl7M9lDqv1Ao4rdvBA&enablejsapi=1" 
+                    title="Geovana's Nostalgia Playlist" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+
             <div class="player-controls">
-                <button class="ctrl-btn" id="playBtn" title="Play / Pause">▶ PLAY</button>
-                <div class="eq-bars">
+                <div class="player-ctrl-group">
+                    <button class="ctrl-btn" id="synthBtn" title="Tocar Sintetizador Chiptune Alternativo">♫ CHIPTUNE SYNTH</button>
+                    <a href="https://music.youtube.com/playlist?list=PL2gA9uBlkZIhdnqNl7M9lDqv1Ao4rdvBA" target="_blank" class="ctrl-btn yt-link-btn" title="Abrir no YouTube Music">
+                        ▶ ABRIR NO YT MUSIC ↗
+                    </a>
+                </div>
+                <div class="eq-bars" id="winampEqBars">
                     <span class="eq-bar b1"></span>
                     <span class="eq-bar b2"></span>
                     <span class="eq-bar b3"></span>
                     <span class="eq-bar b4"></span>
                 </div>
             </div>
-            <p class="player-hint">Cole o link da sua playlist do Spotify ou use o sintetizador integrado ♡</p>
+            <p class="player-hint">♥ Playlist "Nostalgia" de Geovana carregada no Winamp</p>
         </div>
     </div>
 
@@ -1206,15 +1225,15 @@
         });
 
         /* ==========================================
-           Y2K WINAMP RETRO CHIPTUNE / LOFI SYNTHESIZER
+           Y2K WINAMP RETRO PLAYER + NOSTALGIA PLAYLIST
            ========================================== */
         function setupY2KMusicPlayer() {
             const toggleBtn = document.getElementById('musicToggleBtn');
             const playerModal = document.getElementById('y2kPlayer');
-            const playBtn = document.getElementById('playBtn');
+            const synthBtn = document.getElementById('synthBtn');
             const closeBtn = document.getElementById('playerCloseBtn');
             const eqBars = document.querySelectorAll('.eq-bar');
-            let isPlaying = false;
+            let isSynthPlaying = false;
             let audioCtx = null;
             let loopTimer = null;
 
@@ -1222,7 +1241,7 @@
                 if (!audioCtx) return;
                 const osc = audioCtx.createOscillator();
                 const gain = audioCtx.createGain();
-                osc.type = 'triangle'; // warm retro chiptune / lofi sound
+                osc.type = 'triangle';
                 osc.frequency.setValueAtTime(freq, start);
                 gain.gain.setValueAtTime(0.001, start);
                 gain.gain.exponentialRampToValueAtTime(0.045, start + 0.05);
@@ -1237,7 +1256,6 @@
                 if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
                 if (audioCtx.state === 'suspended') audioCtx.resume();
 
-                // Gentle Y2K dreamy pentatonic chord progression (Cmaj7 -> Am7 -> Fmaj7 -> G7)
                 const now = audioCtx.currentTime;
                 const melody = [
                     { f: 523.25, d: 0.4 }, { f: 659.25, d: 0.4 }, { f: 783.99, d: 0.5 }, { f: 987.77, d: 0.6 },
@@ -1253,44 +1271,59 @@
                 loopTimer = setTimeout(playChiptuneMelody, melody.length * 420);
             }
 
-            function startMusic() {
-                isPlaying = true;
+            function startSynth() {
+                isSynthPlaying = true;
                 playChiptuneMelody();
                 toggleBtn.classList.add('playing');
                 toggleBtn.querySelector('.music-label').textContent = 'music: playing ♫';
-                playBtn.textContent = '❚❚ PAUSE';
+                if (synthBtn) synthBtn.textContent = '❚❚ PAUSAR SYNTH';
                 eqBars.forEach(b => b.classList.add('animating'));
             }
 
-            function stopMusic() {
-                isPlaying = false;
+            function stopSynth() {
+                isSynthPlaying = false;
                 if (loopTimer) clearTimeout(loopTimer);
                 if (audioCtx) audioCtx.suspend();
                 toggleBtn.classList.remove('playing');
                 toggleBtn.querySelector('.music-label').textContent = 'music: off';
-                playBtn.textContent = '▶ PLAY';
+                if (synthBtn) synthBtn.textContent = '♫ CHIPTUNE SYNTH';
                 eqBars.forEach(b => b.classList.remove('animating'));
             }
 
-            toggleBtn.addEventListener('click', () => {
+            // Always activate equalizer bars when player modal is visible
+            function togglePlayer() {
                 playerModal.classList.toggle('visible');
-                if (!isPlaying) {
-                    startMusic();
-                } else if (!playerModal.classList.contains('visible')) {
-                    // Just toggle window visibility
+                const isVis = playerModal.classList.contains('visible');
+                if (isVis) {
+                    toggleBtn.classList.add('playing');
+                    toggleBtn.querySelector('.music-label').textContent = 'winamp: on ♫';
+                    eqBars.forEach(b => b.classList.add('animating'));
+                } else if (!isSynthPlaying) {
+                    toggleBtn.classList.remove('playing');
+                    toggleBtn.querySelector('.music-label').textContent = 'music: off';
+                    eqBars.forEach(b => b.classList.remove('animating'));
                 }
-            });
+            }
 
-            playBtn.addEventListener('click', () => {
-                if (isPlaying) {
-                    stopMusic();
-                } else {
-                    startMusic();
-                }
-            });
+            toggleBtn.addEventListener('click', togglePlayer);
+
+            if (synthBtn) {
+                synthBtn.addEventListener('click', () => {
+                    if (isSynthPlaying) {
+                        stopSynth();
+                    } else {
+                        startSynth();
+                    }
+                });
+            }
 
             closeBtn.addEventListener('click', () => {
                 playerModal.classList.remove('visible');
+                if (!isSynthPlaying) {
+                    toggleBtn.classList.remove('playing');
+                    toggleBtn.querySelector('.music-label').textContent = 'music: off';
+                    eqBars.forEach(b => b.classList.remove('animating'));
+                }
             });
         }
 
