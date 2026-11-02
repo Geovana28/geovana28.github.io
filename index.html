@@ -158,11 +158,11 @@
                         </p>
                         <div class="sobre-stats">
                             <div class="stat-item">
-                                <span class="stat-number">4</span>
+                                <span class="stat-number">15</span>
                                 <span class="stat-label">Projetos em Produção</span>
                             </div>
                             <div class="stat-item">
-                                <span class="stat-number">5+</span>
+                                <span class="stat-number">8+</span>
                                 <span class="stat-label">Stacks & Ferramentas</span>
                             </div>
                             <div class="stat-item">
@@ -217,6 +217,10 @@
                     <div class="skill-group reveal delay-2">
                         <h3><i class="bi bi-gear"></i> Ferramentas & Plataformas</h3>
                         <div class="skill-tags">
+                            <span class="skill-tag">Google Cloud (GCP)</span>
+                            <span class="skill-tag">BigQuery</span>
+                            <span class="skill-tag">Looker Studio</span>
+                            <span class="skill-tag">Google Colab</span>
                             <span class="skill-tag">Pandas</span>
                             <span class="skill-tag">Scikit-Learn</span>
                             <span class="skill-tag">Streamlit</span>
@@ -239,9 +243,76 @@
         <section class="portfolio" id="portfolio">
             <div class="container">
                 <h2 class="section-title reveal">MEU <span>PORTFÓLIO.</span></h2>
+
+                <!-- Category Filters -->
+                <div class="portfolio-filters reveal" id="portfolioFilters">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="datascience">🧬 Data Science & IA</button>
+                    <button class="filter-btn" data-filter="simulacao">🔬 Simulações Matemáticas</button>
+                    <button class="filter-btn" data-filter="dashboard">📊 Dashboards</button>
+                    <button class="filter-btn" data-filter="financas">💰 Finanças</button>
+                </div>
+
                 <div class="projects-grid">
 
-                    <div class="project-card reveal delay-1">
+                    <!-- ====== DATA SCIENCE, CLOUD & BI ====== -->
+
+                    <div class="project-card reveal delay-1" data-category="datascience">
+                        <div class="project-img" style="background-image: url('images/project_lakehouse.jpg'); background-color: #0f172a;">
+                            <div class="project-overlay">
+                                <span>GCP Lakehouse</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div style="display: flex; gap: 6px; align-items: center; margin-bottom: 6px;">
+                                <span style="background: rgba(14, 165, 233, 0.15); color: #38bdf8; border: 1px solid rgba(14, 165, 233, 0.3); font-size: 0.68rem; font-weight: 700; padding: 2px 7px; border-radius: 4px;">CLOUD & LAKEHOUSE</span>
+                            </div>
+                            <h3>GCP Ecommerce Modern Data Platform</h3>
+                            <p>Plataforma analítica ponta a ponta na GCP (Medallion Architecture: Bronze/Silver/Gold). Ingestão no Cloud Storage, modelagem dimensional no BigQuery (Star Schema), views de alta performance para Looker Studio e laboratório de ML no Google Colab.</p>
+                            <div class="project-tags">
+                                <span>GCP BigQuery</span><span>Cloud Storage</span><span>Looker Studio</span><span>Google Colab</span><span>Python / SQL</span>
+                            </div>
+                            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                                <a href="https://github.com/Geovana28/gcp-ecommerce-lakehouse" target="_blank" class="btn-repo">
+                                    <i class="bi bi-github"></i> Ver no GitHub
+                                </a>
+                                <a href="../gcp-ecommerce-lakehouse/docs/index.html" target="_blank" class="btn-repo btn-demo">
+                                    <i class="bi bi-box-arrow-up-right"></i> Live Demo
+                                </a>
+                                <a href="https://colab.research.google.com/github/Geovana28/gcp-ecommerce-lakehouse/blob/main/notebooks/01_ecommerce_analytics_colab.ipynb" target="_blank" class="btn-repo" style="border-color: #f59e0b; color: #fbbf24;">
+                                    <i class="bi bi-cpu"></i> Colab
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card reveal delay-1" data-category="datascience">
+                        <div class="project-img" style="background-image: url('images/project_rag_stat.jpg')">
+                            <div class="project-overlay">
+                                <span>RAG Stat Eval</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div style="display: flex; gap: 6px; align-items: center; margin-bottom: 6px;">
+                                <span style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); font-size: 0.68rem; font-weight: 700; padding: 2px 7px; border-radius: 4px;">FLAGSHIP AI</span>
+                            </div>
+                            <h3>RAG Statistical Evaluation Suite</h3>
+                            <p>Suíte formal de estresse estatístico para LLMs/RAG: calibração de incerteza (ECE/MCE), teste de hipótese (McNemar/Bootstrap), robustez a ruído sintético e auditoria de equidade (Regra 4/5).</p>
+                            <div class="project-tags">
+                                <span>Python</span><span>SciPy</span><span>ECE / MCE</span><span>Bootstrap</span><span>Chart.js</span>
+                            </div>
+                            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                                <a href="https://github.com/Geovana28/rag-stat-eval" target="_blank" class="btn-repo">
+                                    <i class="bi bi-github"></i> Ver no GitHub
+                                </a>
+                                <a href="../rag-stat-eval/web/index.html" target="_blank" class="btn-repo btn-demo">
+                                    <i class="bi bi-box-arrow-up-right"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card reveal delay-1" data-category="datascience">
                         <div class="project-img" style="background-image: url('images/project_transit.jpg')">
                             <div class="project-overlay">
                                 <span>BH Transit AI</span>
@@ -249,17 +320,22 @@
                         </div>
                         <div class="project-info">
                             <h3>BH Transit AI</h3>
-                            <p>Análise de mobilidade urbana em Belo Horizonte integrando dados de linhas do GTFS e clima em tempo real via Open-Meteo para prever atrasos e calcular o índice de confiabilidade TRI.</p>
+                            <p>Mobilidade urbana espaço-temporal em BH: intervalos de chegada via Conformal Prediction (90% de garantia matemática), detector de Data Drift (PSI/KS-Test), GTFS e índice de confiabilidade TRI.</p>
                             <div class="project-tags">
-                                <span>Python</span><span>Scikit-Learn</span><span>GTFS</span><span>Streamlit</span>
+                                <span>Python</span><span>Conformal Prediction</span><span>Data Drift</span><span>GTFS</span>
                             </div>
-                            <a href="https://github.com/Geovana28/bh-transit-ai" target="_blank" class="btn-repo">
-                                <i class="bi bi-github"></i> Ver no GitHub
-                            </a>
+                            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                                <a href="https://github.com/Geovana28/bh-transit-ai" target="_blank" class="btn-repo">
+                                    <i class="bi bi-github"></i> Ver no GitHub
+                                </a>
+                                <a href="../bh-transit-ai/index.html" target="_blank" class="btn-repo btn-demo">
+                                    <i class="bi bi-box-arrow-up-right"></i> Live Demo
+                                </a>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="project-card reveal delay-2">
+                    <div class="project-card reveal delay-2" data-category="datascience">
                         <div class="project-img" style="background-image: url('images/project_dengue.jpg')">
                             <div class="project-overlay">
                                 <span>Dengue Surveillance</span>
@@ -267,40 +343,25 @@
                         </div>
                         <div class="project-info">
                             <h3>Dengue Surveillance AI</h3>
-                            <p>Análise epidemiológica das capitais brasileiras cruzando histórico de notificações e variáveis meteorológicas com modelos de defasagem temporal (lag) e mapas espaciais.</p>
+                            <p>Vigilância epidemiológica com Nowcasting Bayesiano e backtesting retrospectivo (MAE/RMSE) para correção do atraso do SINAN, simulação de intervenção antecipada e defasagem climática (lag).</p>
                             <div class="project-tags">
-                                <span>Python</span><span>Pandas</span><span>Statsmodels</span><span>Plotly</span>
-                            </div>
-                            <a href="https://github.com/Geovana28/dengue" target="_blank" class="btn-repo">
-                                <i class="bi bi-github"></i> Ver no GitHub
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="project-card reveal delay-3">
-                        <div class="project-img" style="background-image: url('images/project_edudata.jpg')">
-                            <div class="project-overlay">
-                                <span>EduData Analytics</span>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3>EduData Analytics</h3>
-                            <p>Painel analítico sobre desigualdade educacional no Brasil: cruzamento de microdados do ENEM com indicadores socioeconômicos do IBGE (Índice de Gini) e simulador preditivo de impacto escolar.</p>
-                            <div class="project-tags">
-                                <span>JavaScript</span><span>Chart.js</span><span>Econometria</span><span>HTML/CSS</span>
+                                <span>Python</span><span>Bayesian Nowcasting</span><span>Backtesting</span><span>Plotly</span>
                             </div>
                             <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-                                <a href="https://github.com/Geovana28/edudata-analytics" target="_blank" class="btn-repo">
+                                <a href="https://github.com/Geovana28/dengue" target="_blank" class="btn-repo">
                                     <i class="bi bi-github"></i> Ver no GitHub
                                 </a>
-                                <a href="../educacao/index.html" target="_blank" class="btn-repo" style="border-color: var(--accent-cyan); color: var(--accent-cyan);">
+                                <a href="../dengue/index.html" target="_blank" class="btn-repo btn-demo">
                                     <i class="bi bi-box-arrow-up-right"></i> Live Demo
+                                </a>
+                                <a href="https://colab.research.google.com/github/Geovana28/dengue/blob/main/dengue_analysis_eda.ipynb" target="_blank" class="btn-repo" style="border-color: #f59e0b; color: #fbbf24;">
+                                    <i class="bi bi-cpu"></i> Colab
                                 </a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="project-card reveal delay-2">
+                    <div class="project-card reveal delay-3" data-category="datascience">
                         <div class="project-img" style="background-image: url('images/project_dengue.jpg'); filter: hue-rotate(180deg);">
                             <div class="project-overlay">
                                 <span>COVID-19 Intelligence</span>
@@ -308,15 +369,255 @@
                         </div>
                         <div class="project-info">
                             <h3>COVID-19 Intelligence</h3>
-                            <p>Plataforma epidemiológica com análise das variantes no Brasil e no mundo, avaliação da cobertura vacinal e modelagem matemática dupla: simulação computacional de intervenções (Modelo SIR) e projeções preditivas de platô assintótico via Equações Diferenciais Ordinárias Logísticas (Santos / UFMG).</p>
+                            <p>Plataforma epidemiológica com análise de variantes, cobertura vacinal e modelagem matemática: simulação SIR e projeções via EDO Logísticas (Santos / UFMG).</p>
                             <div class="project-tags">
-                                <span>Python</span><span>Scipy (EDO)</span><span>Mínimos Quadrados</span><span>Plotly</span><span>Streamlit</span>
+                                <span>Python</span><span>Scipy (EDO)</span><span>Plotly</span><span>Streamlit</span>
                             </div>
-                            <a href="https://github.com/Geovana28/covid" target="_blank" class="btn-repo">
-                                <i class="bi bi-github"></i> Ver no GitHub
-                            </a>
+                            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                                <a href="https://github.com/Geovana28/covid" target="_blank" class="btn-repo">
+                                    <i class="bi bi-github"></i> Ver no GitHub
+                                </a>
+                                <a href="../covid/index.html" target="_blank" class="btn-repo btn-demo">
+                                    <i class="bi bi-box-arrow-up-right"></i> Live Demo
+                                </a>
+                            </div>
                         </div>
+                    </div>
 
+                    <div class="project-card reveal delay-1" data-category="datascience">
+                        <div class="project-img" style="background-image: url('images/project_triagem.jpg')">
+                            <div class="project-overlay">
+                                <span>Triagem IA</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Triagem Clínica IA</h3>
+                            <p>Classificação de risco sob perda assimétrica clínica (C(FN) 20× maior que C(FP)), interpretabilidade local SHAP para cada sinal vital, protocolo de Manchester e escore NEWS2.</p>
+                            <div class="project-tags">
+                                <span>JavaScript</span><span>Cost-Sensitive AI</span><span>SHAP XAI</span><span>NEWS2</span>
+                            </div>
+                            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                                <a href="https://github.com/Geovana28/triagem-ia" target="_blank" class="btn-repo">
+                                    <i class="bi bi-github"></i> Ver no GitHub
+                                </a>
+                                <a href="../triagem-ia/index.html" target="_blank" class="btn-repo btn-demo">
+                                    <i class="bi bi-box-arrow-up-right"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ====== DASHBOARDS & ANALYTICS ====== -->
+
+                    <div class="project-card reveal delay-2" data-category="dashboard">
+                        <div class="project-img" style="background-image: url('images/project_edudata.jpg')">
+                            <div class="project-overlay">
+                                <span>EduData Analytics</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>EduData Analytics</h3>
+                            <p>Econometria aplicada a microdados do ENEM e IBGE: regressão múltipla OLS controlando por renda e infraestrutura escolar, importância de variáveis via Random Forest, índice de Gini e simulador de políticas públicas.</p>
+                            <div class="project-tags">
+                                <span>JavaScript</span><span>Econometria OLS</span><span>Random Forest</span><span>Chart.js</span>
+                            </div>
+                            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                                <a href="https://github.com/Geovana28/edudata-analytics" target="_blank" class="btn-repo">
+                                    <i class="bi bi-github"></i> Ver no GitHub
+                                </a>
+                                <a href="../educacao/index.html" target="_blank" class="btn-repo btn-demo">
+                                    <i class="bi bi-box-arrow-up-right"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ====== SIMULAÇÕES MATEMÁTICAS ====== -->
+
+                    <div class="project-card reveal delay-1" data-category="simulacao">
+                        <div class="project-img" style="background-image: url('images/project_balistica.jpg')">
+                            <div class="project-overlay">
+                                <span>Movimento Projétil</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Simulador de Balística Externa</h3>
+                            <p>Balística com arrasto aerodinâmico não-linear (Fd = ½ρCdAv²), integração Runge-Kutta 4ª ordem, perturbação estocástica de vento e cálculo de Erro Circular Provável (CEP).</p>
+                            <div class="project-tags">
+                                <span>JavaScript</span><span>Runge-Kutta 4</span><span>Aerodinâmica</span><span>Dispersão CEP</span>
+                            </div>
+                            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                                <a href="https://github.com/Geovana28/balistica" target="_blank" class="btn-repo">
+                                    <i class="bi bi-github"></i> Ver no GitHub
+                                </a>
+                                <a href="../balistica/index.html" target="_blank" class="btn-repo btn-demo">
+                                    <i class="bi bi-box-arrow-up-right"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card reveal delay-2" data-category="simulacao">
+                        <div class="project-img" style="background-image: url('images/project_radioativo.jpg')">
+                            <div class="project-overlay">
+                                <span>Decaimento Radioativo</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Decaimento Radioativo Estocástico</h3>
+                            <p>Laboratório de física nuclear com decaimento estocástico binomial átomo a átomo, datação por Carbono-14, cinética exponencial N(t) e presets de 6 radioisótopos reais.</p>
+                            <div class="project-tags">
+                                <span>JavaScript</span><span>Processo Poisson</span><span>Canvas 2D</span><span>Datação C-14</span>
+                            </div>
+                            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                                <a href="https://github.com/Geovana28/decaimento-radioativo" target="_blank" class="btn-repo">
+                                    <i class="bi bi-github"></i> Ver no GitHub
+                                </a>
+                                <a href="../decaimento-radioativo/index.html" target="_blank" class="btn-repo btn-demo">
+                                    <i class="bi bi-box-arrow-up-right"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card reveal delay-3" data-category="simulacao">
+                        <div class="project-img" style="background-image: url('images/project_lotkavolterra.jpg')">
+                            <div class="project-overlay">
+                                <span>Predador — Presa</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Lotka-Volterra & Holling II</h3>
+                            <p>Dinâmica populacional com resposta funcional de saturação de Holling Tipo II, conservação do Invariante orbital de Lyapunov e análise de estabilidade assintótica.</p>
+                            <div class="project-tags">
+                                <span>JavaScript</span><span>Invariante Lyapunov</span><span>Holling II</span><span>Retrato de Fase</span>
+                            </div>
+                            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                                <a href="https://github.com/Geovana28/lotka-volterra" target="_blank" class="btn-repo">
+                                    <i class="bi bi-github"></i> Ver no GitHub
+                                </a>
+                                <a href="../lotka-volterra/index.html" target="_blank" class="btn-repo btn-demo">
+                                    <i class="bi bi-box-arrow-up-right"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card reveal delay-1" data-category="simulacao">
+                        <div class="project-img" style="background-image: url('images/project_newton.jpg')">
+                            <div class="project-overlay">
+                                <span>Resfriamento de Newton</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Resfriamento de Newton</h3>
+                            <p>Simulador termodinâmico com dois modos: "Cerveja na Geladeira" (quanto tempo até gelar?) e "Cena Forense" (estimar hora do óbito). Curva T(t) e taxa dT/dt.</p>
+                            <div class="project-tags">
+                                <span>JavaScript</span><span>Chart.js</span><span>EDO</span><span>Termodinâmica</span>
+                            </div>
+                            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                                <a href="https://github.com/Geovana28/resfriamento-newton" target="_blank" class="btn-repo">
+                                    <i class="bi bi-github"></i> Ver no GitHub
+                                </a>
+                                <a href="../resfriamento-newton/index.html" target="_blank" class="btn-repo btn-demo">
+                                    <i class="bi bi-box-arrow-up-right"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card reveal delay-2" data-category="simulacao">
+                        <div class="project-img" style="background-image: url('images/project_seir.jpg')">
+                            <div class="project-overlay">
+                                <span>Epidemia SEIR</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Epidemia SEIR & R(t) Dinâmico</h3>
+                            <p>Modelagem epidemiológica avançada: dinâmica com R(t) em tempo real, limiar de saturação hospitalar, intervenções NPIs (lockdown/vacinas) e cenários epidêmicos históricos.</p>
+                            <div class="project-tags">
+                                <span>JavaScript</span><span>R(t) Dinâmico</span><span>Runge-Kutta</span><span>Epidemiologia</span>
+                            </div>
+                            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                                <a href="https://github.com/Geovana28/epidemia-seir" target="_blank" class="btn-repo">
+                                    <i class="bi bi-github"></i> Ver no GitHub
+                                </a>
+                                <a href="../epidemia-seir/index.html" target="_blank" class="btn-repo btn-demo">
+                                    <i class="bi bi-box-arrow-up-right"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card reveal delay-3" data-category="simulacao">
+                        <div class="project-img" style="background-image: url('images/project_farmaco.jpg')">
+                            <div class="project-overlay">
+                                <span>Farmacocinética</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Farmacocinética PK/PD Populacional</h3>
+                            <p>Simulador PK/PD monocompartimental com variabilidade inter-individual log-normal por Monte Carlo, janela terapêutica (MEC/MTC), vias oral/IV e risco de toxicidade.</p>
+                            <div class="project-tags">
+                                <span>JavaScript</span><span>Monte Carlo PK</span><span>Janela Terapêutica</span><span>Farmacometria</span>
+                            </div>
+                            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                                <a href="https://github.com/Geovana28/farmacocinetica" target="_blank" class="btn-repo">
+                                    <i class="bi bi-github"></i> Ver no GitHub
+                                </a>
+                                <a href="../farmacocinetica/index.html" target="_blank" class="btn-repo btn-demo">
+                                    <i class="bi bi-box-arrow-up-right"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card reveal delay-1" data-category="simulacao">
+                        <div class="project-img" style="background-image: url('images/project_glicose.jpg')">
+                            <div class="project-overlay">
+                                <span>Glicose-Insulina</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Glicose-Insulina (Bergman)</h3>
+                            <p>Modelo Mínimo de Bergman simulando dinâmica glicose-insulina pós-refeição com fenótipos metabólicos (saudável, pré-diabético, DM2, DM1, atleta) e índice de disposição.</p>
+                            <div class="project-tags">
+                                <span>JavaScript</span><span>Chart.js</span><span>EDO 3-Comp.</span><span>Endocrinologia</span>
+                            </div>
+                            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                                <a href="https://github.com/Geovana28/glicose-insulina" target="_blank" class="btn-repo">
+                                    <i class="bi bi-github"></i> Ver no GitHub
+                                </a>
+                                <a href="../glicose-insulina/index.html" target="_blank" class="btn-repo btn-demo">
+                                    <i class="bi bi-box-arrow-up-right"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ====== FINANÇAS ====== -->
+
+                    <div class="project-card reveal delay-2" data-category="financas">
+                        <div class="project-img" style="background-image: url('images/project_fire.jpg')">
+                            <div class="project-overlay">
+                                <span>F.I.R.E. Calculator</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Calculadora F.I.R.E. Quantitativa</h3>
+                            <p>Simulação estocástica de Monte Carlo (500 caminhos brownianos), análise de Risco de Sequência de Retornos (SRR), probabilidade de ruína patrimonial e bandas quantílicas de mercado.</p>
+                            <div class="project-tags">
+                                <span>JavaScript</span><span>Monte Carlo</span><span>Quant Finance</span><span>Chart.js</span>
+                            </div>
+                            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                                <a href="https://github.com/Geovana28/calculadora-fire" target="_blank" class="btn-repo">
+                                    <i class="bi bi-github"></i> Ver no GitHub
+                                </a>
+                                <a href="../calculadora-fire/index.html" target="_blank" class="btn-repo btn-demo">
+                                    <i class="bi bi-box-arrow-up-right"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
@@ -533,7 +834,40 @@
             setupHamburger();
             setupBackToTop();
             setupHeaderScroll();
+            setupPortfolioFilters();
         });
+
+        /* ==========================================
+           PORTFOLIO CATEGORY FILTERS
+           ========================================== */
+        function setupPortfolioFilters() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-card[data-category]');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    const filter = btn.dataset.filter;
+
+                    projectCards.forEach(card => {
+                        if (filter === 'all' || card.dataset.category === filter) {
+                            card.style.display = '';
+                            card.style.opacity = '0';
+                            card.style.transform = 'translateY(20px)';
+                            requestAnimationFrame(() => {
+                                card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+                                card.style.opacity = '1';
+                                card.style.transform = 'translateY(0)';
+                            });
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        }
     </script>
 </body>
 

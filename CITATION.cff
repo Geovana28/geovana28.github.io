@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you cite or review this portfolio in academic or institutional evaluations, please cite it as below."
+authors:
+  - family-names: Silva
+    given-names: Geovana
+    orcid: "https://orcid.org/0009-0000-0000-0000"
+title: "Geovana Silva: Scientific Software Engineering & Applied Machine Learning Research Portfolio"
+version: 2.0.0
+date-released: 2026-11-01
+url: "https://geovana28.github.io/portfolio/"
+repository-code: "https://github.com/Geovana28/portfolio"
+keywords:
+  - "machine learning"
+  - "data engineering"
+  - "mathematical modeling"
+  - "scientific computing"
+  - "epidemiological surveillance"
+license: MIT
+

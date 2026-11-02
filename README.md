@@ -14,17 +14,21 @@
 
 ---
 
-## 🚀 Projetos em Destaque
+## 🚀 Projetos em Destaque (Flagships)
 
-- **BH Transit AI:** Análise espaço-temporal do transporte público de Belo Horizonte (GTFS) cruzado com clima em tempo real para modelagem preditiva de atrasos e confiabilidade operacional (índice TRI).
-- **Dengue Surveillance AI:** Vigilância epidemiológica preditiva nas capitais brasileiras, com modelos de defasagem climática (lag de temperatura/precipitação) e análise espacial.
-- **EduData Analytics:** Painel analítico explorando desigualdades educacionais no ENEM correlacionadas a microdados do IBGE (Índice de Gini) e simulação de intervenções escolares.
-- **COVID-19 Intelligence:** Vigilância das ondas de variantes (Gama, Delta, Ômicron), avaliação causal da cobertura vacinal e simulador dinâmico baseado em equações diferenciais (Modelo SIR).
+- **RAG Statistical Evaluation Suite (`rag-stat-eval`):** Framework de avaliação estatística rigorosa para sistemas RAG/LLMs com teste pareado de McNemar (correção de Edwards), análise de poder estatístico, Bootstrap não-paramétrico ($B=2.000$), calibração ECE/MCE, degradação controlada por ruído e auditoria de equidade (Regra dos 4/5).
+- **GCP Ecommerce Lakehouse (`gcp-ecommerce-lakehouse`):** Plataforma analítica na Google Cloud Platform utilizando Arquitetura Medalhão (Bronze/Silver/Gold) no BigQuery e Cloud Storage, modelagem dimensional (Star Schema), suíte automatizada de qualidade de dados e laboratório de ML no Google Colab.
+- **Dengue Surveillance AI (`dengue`):** Vigilância epidemiológica preditiva nas capitais brasileiras com Nowcasting Empírico Bayesiano, avaliação retrospectiva (*backtesting* com MAE/RMSE), correlação espaço-temporal com defasagem climática (*lag*) e integração com InfoDengue/Open-Meteo.
+- **BH Transit AI (`bh-transit-ai`):** Mobilidade urbana espaço-temporal em Belo Horizonte (GTFS + Open-Meteo em tempo real) com regressão/classificação via Random Forest avaliada contra baseline, cobertura empírica de *Split Conformal Prediction* (90%) e índice de confiabilidade operacional (TRI).
+- **Triagem Clínica IA (`triagem-ia`):** Protótipo de apoio à decisão clínica baseado nas diretrizes NEWS2 e Sistema de Triagem de Manchester, com otimização de limiar sob perda clínica assimétrica e atribuição local de variáveis fisiológicas.
+- **EduData Analytics (`edudata-analytics`):** Painel econométrico interativo explorando desigualdades educacionais no ENEM e indicadores do IBGE via regressão múltipla OLS, importância de atributos por Random Forest, índice de Gini e simulador de investimentos em infraestrutura escolar.
+- **COVID-19 Intelligence (`covid`):** Vigilância espaço-temporal das ondas epidemiológicas no Brasil e no mundo, análise temporal da cobertura vacinal e simulador dinâmico baseado em EDOs (Modelo SIR e Crescimento Logístico de Verhulst).
 
 ---
 
 ## 🛠️ Tecnologias & Stacks
 
+- **Cloud & Big Data:** Google Cloud Platform (GCP), Google BigQuery, Cloud Storage (GCS), Looker Studio, Google Colab.
 - **Full Stack:** PHP (Arquitetura MVC), JavaScript (ES6+), HTML5 Semântico, CSS3 Moderno (Glassmorphism & Responsividade), SQL (MySQL/PostgreSQL).
 - **Data Science & AI:** Python, Pandas, Scikit-Learn, Streamlit, Folium, Séries Temporais, Análise Espacial (GIS/GTFS).
 - **Engenharia de Software:** Git/GitHub, GitHub Actions (CI/CD), Pytest, Automação.
