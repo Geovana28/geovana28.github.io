@@ -1953,3 +1953,51 @@ body {
   opacity: 0.5;
   filter: grayscale(1);
 }
+
+/* REAL AVATAR Y2K STYLES */
+.y2k-avatar-real {
+  background: #fff5f9;
+  border: 2px solid;
+  border-color: #ffffff #9d174d #9d174d #ffffff;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 12px;
+  box-shadow: inset 1px 1px 0 #fff, inset -1px -1px 0 #db2777;
+}
+
+.avatar-frame-retro {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 8px;
+  border: 2px solid #000;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 2px 2px 0 #db2777;
+  background: #fff;
+}
+
+.real-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  display: block;
+}
+
+.passport-photo-area.has-photo {
+  padding: 6px;
+  background: #ffffff;
+  border: 2px solid #000;
+  box-shadow: 2px 2px 0 #db2777;
+}
+
+.passport-real-img {
+  width: 100%;
+  max-width: 150px;
+  height: 160px;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+  margin: 0 auto 6px;
+  border: 1px solid #9d174d;
+}
