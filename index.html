@@ -1409,6 +1409,52 @@
             });
         });
 
+        
+        /* ==========================================
+           RETRO SOUND EFFECTS SYSTEM (PETRAPIXEL INSPIRATION)
+           ========================================== */
+        function setupRetroSFX() {
+            let isMuted = localStorage.getItem('retroSoundMuted') === 'true';
+            const soundTray = document.getElementById('traySoundToggle');
+
+            function updateTrayIcon() {
+                if (soundTray) {
+                    soundTray.textContent = isMuted ? '🔇' : '🔊';
+                    soundTray.classList.toggle('muted', isMuted);
+                }
+            }
+            updateTrayIcon();
+
+            if (soundTray) {
+                soundTray.addEventListener('click', () => {
+                    isMuted = !isMuted;
+                    localStorage.setItem('retroSoundMuted', isMuted);
+                    updateTrayIcon();
+                    if (!isMuted) playSFX('actualClick');
+                });
+            }
+
+            function playSFX(id, vol = 0.35) {
+                if (isMuted) return;
+                try {
+                    const audio = document.getElementById(id);
+                    if (audio) {
+                        audio.volume = vol;
+                        audio.currentTime = 0;
+                        audio.play().catch(() => {});
+                    }
+                } catch(e) {}
+            }
+
+            document.querySelectorAll('a, .desktop-icon, .filter-btn, .taskbar-tab, .window-controls button').forEach(el => {
+                el.addEventListener('mouseenter', () => playSFX('tockSound', 0.25));
+            });
+
+            document.querySelectorAll('button, .btn, .filter-btn, .desktop-icon, .window-controls button, input[type="submit"], .nav-link').forEach(el => {
+                el.addEventListener('click', () => playSFX('actualClick', 0.3));
+            });
+        }
+
         /* ==========================================
            Y2K WINAMP RETRO PLAYER + NOSTALGIA PLAYLIST
            ========================================== */
@@ -1697,7 +1743,7 @@
             <div class="retro-titlebar">
                 <span class="title-text"><span class="title-icon">💻</span> SYSTEM MESSAGE: WELCOME.EXE</span>
                 <div class="window-controls">
-                    <button type="button" class="btn-close" id="modalCloseX">×</button>
+                    <button type="button" class="btn-close" id="modalCloseX" onclick="document.getElementById('welcomeModal').style.display='none'">×</button>
                 </div>
             </div>
             <div class="modal-body-content">
@@ -1711,7 +1757,7 @@
                 </div>
             </div>
             <div class="modal-footer-btn">
-                <button type="button" class="btn btn-primary" id="modalOkBtn" style="padding: 4px 20px;">[ OK ]</button>
+                <button type="button" class="btn btn-primary" id="modalOkBtn" onclick="document.getElementById('welcomeModal').style.display='none'" style="padding: 4px 20px;">[ OK ]</button>
             </div>
         </div>
     </div>
