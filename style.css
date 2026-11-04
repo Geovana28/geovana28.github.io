@@ -1,3 +1,16 @@
+/* ==========================================
+   RETRO PIXEL FONT (RAINYHEARTS)
+   ========================================== */
+@font-face {
+  font-family: 'rainyhearts';
+  src: url('fonts/rainyhearts.woff2') format('woff2'),
+       url('fonts/rainyhearts.woff') format('woff'),
+       url('fonts/rainyhearts.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* ===================================================================
    GEOVANA PORTFOLIO — AUTHENTIC 2004 RETRO OS (WINDOWS XP / 98 x Y2K)
    Estética: True Bevel & Emboss (Chanfrado 3D) • Cantos Retos • Tahoma/Verdana
@@ -22,12 +35,12 @@
   --plum-muted: #6b4683;
 
   /* Cores de Sistema & Bevel (Chanfro Clássico) */
-  --win-bg: #ece9d8;          /* Clássico tom cinza/creme de sistema operacional */
-  --win-bg-pink: #fff5fa;     /* Variação sistema girlie 2004 */
-  --win-light: #ffffff;       /* Luz superior/esquerda */
-  --win-dark: #9d174d;        /* Sombra inferior/direita */
-  --win-shadow-deep: #000000; /* Sombra mais externa */
-  --chrome-btn: #c0c0c0;      /* Cinza dos botões de janela */
+  --win-bg: #ece9d8;
+  --win-bg-pink: #fff5fa;
+  --win-light: #ffffff;
+  --win-dark: #9d174d;
+  --win-shadow-deep: #000000;
+  --chrome-btn: #c0c0c0;
   --chrome-light: #ffffff;
   --chrome-dark: #808080;
 
@@ -49,7 +62,9 @@
 /* ==========================================
    RESET & FUNDO RETRO 2004 (BLISS / XADREZ)
    ========================================== */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -60,12 +75,21 @@ html {
   scroll-padding-top: 60px;
 }
 
+
+/* Cursores Retrô Pixel Art (Inspirado em PetraPixel) */
+html, body {
+  cursor: url('images/cursor_default.gif'), auto;
+}
+
+a, button, .btn, .filter-btn, .desktop-icon, .taskbar-tab, .retro-start-btn, .ctrl-btn, .window-controls button, input[type='submit'] {
+  cursor: url('images/cursor_pointer.png') 7 5, pointer !important;
+}
+
 body {
   font-family: var(--font-system);
   font-size: 13px;
   background-color: var(--baby-pink);
-  /* Fundo estilo desktop com padrão xadrez retrô suave e gradiente no topo */
-  background-image: 
+  background-image:
     linear-gradient(180deg, rgba(255, 230, 245, 0.95) 0%, rgba(248, 215, 232, 0.9) 250px, rgba(248, 215, 232, 0.95) 100%),
     repeating-linear-gradient(0deg, transparent, transparent 19px, rgba(219, 39, 119, 0.08) 19px, rgba(219, 39, 119, 0.08) 20px),
     repeating-linear-gradient(90deg, transparent, transparent 19px, rgba(219, 39, 119, 0.08) 19px, rgba(219, 39, 119, 0.08) 20px);
@@ -73,23 +97,21 @@ body {
   color: var(--dark-plum);
   line-height: 1.5;
   overflow-x: hidden;
-  padding-bottom: 50px; /* Espaço para a barra de tarefas */
+  padding-bottom: 50px;
   -webkit-font-smoothing: antialiased;
 }
 
-/* SCANLINES CRT VISÍVEIS (Opacidade ajustada para ~0.05 real) */
+/* SCANLINES CRT */
 body::after {
   content: "";
   position: fixed;
   inset: 0;
   pointer-events: none;
   z-index: 99999;
-  background: repeating-linear-gradient(
-    transparent 0px,
-    rgba(30, 10, 30, 0.065) 1px,
-    transparent 2px,
-    transparent 3px
-  );
+  background: repeating-linear-gradient(transparent 0px,
+      rgba(30, 10, 30, 0.065) 1px,
+      transparent 2px,
+      transparent 3px);
   opacity: 0.85;
 }
 
@@ -101,35 +123,44 @@ body::after {
   z-index: 2;
 }
 
-img { max-width: 100%; display: block; }
-a { text-decoration: none; color: inherit; }
+img {
+  max-width: 100%;
+  display: block;
+}
 
-/* Custom Y2K Scrollbar Retrô Quadrada */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Scrollbar quadrada retrô */
 ::-webkit-scrollbar {
   width: 16px;
 }
+
 ::-webkit-scrollbar-track {
   background: #ece9d8;
   border-left: 1px solid #ffffff;
   border-right: 1px solid #808080;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #ff4fa3;
   border: 2px solid;
   border-color: #ffffff #9d174d #9d174d #ffffff;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: #db2777;
 }
 
-/* Seleção de Texto */
 ::selection {
   background: #000080;
   color: #ffffff;
 }
 
 /* ==========================================
-   ANIMAÇÃO .reveal (CORREÇÃO)
+   ANIMAÇÃO .reveal
    ========================================== */
 .reveal {
   opacity: 0;
@@ -142,9 +173,17 @@ a { text-decoration: none; color: inherit; }
   transform: translateY(0);
 }
 
-.delay-1 { transition-delay: 0.1s; }
-.delay-2 { transition-delay: 0.2s; }
-.delay-3 { transition-delay: 0.3s; }
+.delay-1 {
+  transition-delay: 0.1s;
+}
+
+.delay-2 {
+  transition-delay: 0.2s;
+}
+
+.delay-3 {
+  transition-delay: 0.3s;
+}
 
 /* ==========================================
    RETRO SYSTEM TOP STATUS BAR & MARQUEE
@@ -184,8 +223,17 @@ a { text-decoration: none; color: inherit; }
 }
 
 @keyframes pulse-green {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.4; transform: scale(0.85); }
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.4;
+    transform: scale(0.85);
+  }
 }
 
 .system-status-bar .status-right {
@@ -194,7 +242,6 @@ a { text-decoration: none; color: inherit; }
   gap: 14px;
 }
 
-/* Marquee retrô com novidade */
 .retro-marquee-strip {
   background: #fff8bb;
   color: #854d0e;
@@ -213,14 +260,18 @@ a { text-decoration: none; color: inherit; }
 }
 
 @keyframes marquee-scroll {
-  from { transform: translateX(100vw); }
-  to { transform: translateX(-100%); }
+  from {
+    transform: translateX(100vw);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
 }
 
 /* ==========================================
-   TRUE 3D BEVEL & EMBOSS CLASSES (O SEGREDO RETRÔ)
+   TRUE 3D BEVEL & EMBOSS
    ========================================== */
-/* Janela de Sistema Clássica (Bevel Externo Elevado) */
 .retro-window,
 .spec-card,
 .skill-group,
@@ -238,7 +289,7 @@ a { text-decoration: none; color: inherit; }
   position: relative;
 }
 
-/* Título de Janela Autêntico (Gradiente com texto branco sombreado) */
+/* Barra de título */
 .retro-titlebar {
   background: linear-gradient(90deg, #db2777 0%, #ff65b2 40%, #c9a7ff 100%);
   color: #ffffff;
@@ -262,7 +313,7 @@ a { text-decoration: none; color: inherit; }
   text-shadow: 1px 1px 0 #000000;
 }
 
-/* Botões Chrome de Sistema (_ □ ×) com Chanfro Real */
+/* Botões de janela (_ □ ×) */
 .window-controls {
   display: flex;
   gap: 3px;
@@ -290,7 +341,6 @@ a { text-decoration: none; color: inherit; }
   transition: none;
 }
 
-/* Botão afundado quando pressionado */
 .window-controls button:active,
 .retro-win-btn:active {
   border-color: #404040 #ffffff #ffffff #404040 !important;
@@ -304,7 +354,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 /* ==========================================
-   BOTÕES FÍSICOS RETRÔ QUE AFUNDAM
+   BOTÕES FÍSICOS QUE AFUNDAM
    ========================================== */
 .btn,
 .filter-btn,
@@ -338,7 +388,6 @@ a { text-decoration: none; color: inherit; }
   background: #ff4fa3;
 }
 
-/* AFUNDAMENTO CLÁSSICO: inverte as bordas da luz e sombra */
 .btn:active,
 .filter-btn:active,
 .btn-repo:active,
@@ -491,7 +540,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 /* ==========================================
-   DESKTOP ICONS GRID (SHORTCUTS 2004)
+   DESKTOP ICONS GRID
    ========================================== */
 .desktop-shortcuts-area {
   padding: 16px 0 6px;
@@ -548,7 +597,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 /* ==========================================
-   HERO SECTION
+   HERO
    ========================================== */
 .hero {
   padding: 10px 0 25px;
@@ -593,8 +642,15 @@ a { text-decoration: none; color: inherit; }
 }
 
 @keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
 }
 
 .hero-desc {
@@ -639,7 +695,7 @@ a { text-decoration: none; color: inherit; }
   transform: translate(1px, 1px);
 }
 
-/* CARTEIRINHA ID NO HERO */
+/* Carteirinha ID */
 .y2k-id-card {
   max-width: 340px;
   margin: 0 auto;
@@ -660,9 +716,18 @@ a { text-decoration: none; color: inherit; }
   height: 9px;
   border: 1px solid #000000;
 }
-.y2k-dot.red { background: #ff5f56; }
-.y2k-dot.yellow { background: #ffbd2e; }
-.y2k-dot.green { background: #27c93f; }
+
+.y2k-dot.red {
+  background: #ff5f56;
+}
+
+.y2k-dot.yellow {
+  background: #ffbd2e;
+}
+
+.y2k-dot.green {
+  background: #27c93f;
+}
 
 .y2k-id-title {
   font-family: var(--font-mono);
@@ -672,7 +737,17 @@ a { text-decoration: none; color: inherit; }
   text-shadow: 1px 1px 0 #000;
 }
 
-.y2k-id-body {
+.y2k-id-
+/* Cursores Retrô Pixel Art (Inspirado em PetraPixel) */
+html, body {
+  cursor: url('images/cursor_default.gif'), auto;
+}
+
+a, button, .btn, .filter-btn, .desktop-icon, .taskbar-tab, .retro-start-btn, .ctrl-btn, .window-controls button, input[type='submit'] {
+  cursor: url('images/cursor_pointer.png') 7 5, pointer !important;
+}
+
+body {
   padding: 14px;
   background: #fffafd;
 }
@@ -724,7 +799,7 @@ a { text-decoration: none; color: inherit; }
   padding: 4px 6px;
   background: #ffffff;
   border: 1px solid;
-  border-color: #9d174d #ffffff #ffffff #9d174d; /* Inset */
+  border-color: #9d174d #ffffff #ffffff #9d174d;
 }
 
 .y2k-stat-row strong {
@@ -751,8 +826,15 @@ a { text-decoration: none; color: inherit; }
   color: #ff4fa3;
 }
 
-.section-title::before { content: '★ '; color: #ff4fa3; }
-.section-title::after { content: ' ★'; color: #ff4fa3; }
+.section-title::before {
+  content: '★ ';
+  color: #ff4fa3;
+}
+
+.section-title::after {
+  content: ' ★';
+  color: #ff4fa3;
+}
 
 .spec-grid {
   display: grid;
@@ -840,7 +922,7 @@ a { text-decoration: none; color: inherit; }
 
 .passport-box {
   border: 1px solid;
-  border-color: #9d174d #ffffff #ffffff #9d174d; /* Inset */
+  border-color: #9d174d #ffffff #ffffff #9d174d;
   padding: 10px;
   background: #fffafd;
 }
@@ -860,7 +942,7 @@ a { text-decoration: none; color: inherit; }
 
 .photo-caption {
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 10px;
   color: var(--plum-muted);
 }
 
@@ -925,13 +1007,13 @@ a { text-decoration: none; color: inherit; }
 
 .stat-label {
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 700;
   color: var(--dark-plum);
 }
 
 /* ==========================================
-   SKILLS & PROGRESS BARS SEGMENTADAS DO XP
+   SKILLS & BARRAS SEGMENTADAS DO XP
    ========================================== */
 .skills-section {
   padding: 15px 0;
@@ -971,26 +1053,22 @@ a { text-decoration: none; color: inherit; }
   margin-bottom: 3px;
 }
 
-/* Trilho Inset estilo Windows XP */
 .skill-track {
   height: 16px;
   background: #ffffff;
   border: 2px solid;
-  border-color: #9d174d #ffffff #ffffff #9d174d; /* Inset */
+  border-color: #9d174d #ffffff #ffffff #9d174d;
   padding: 1px;
 }
 
-/* BLOCOS SEGMENTADOS DE CARREGAMENTO DO XP */
 .skill-fill {
   height: 100%;
   width: 0;
-  background: repeating-linear-gradient(
-    90deg,
-    #ff4fa3 0px,
-    #ff4fa3 9px,
-    transparent 9px,
-    transparent 12px
-  );
+  background: repeating-linear-gradient(90deg,
+      #ff4fa3 0px,
+      #ff4fa3 9px,
+      transparent 9px,
+      transparent 12px);
   transition: width 1s ease-out;
 }
 
@@ -1013,7 +1091,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 /* ==========================================
-   PORTFOLIO (18 JANELAS DE PROJETOS)
+   PORTFÓLIO (JANELAS DE PROJETOS)
    ========================================== */
 .portfolio {
   padding: 15px 0 35px;
@@ -1033,7 +1111,6 @@ a { text-decoration: none; color: inherit; }
   gap: 22px;
 }
 
-/* Janela de Projeto com Animação de Fechar e Minimizar */
 .project-card {
   display: flex;
   flex-direction: column;
@@ -1068,7 +1145,7 @@ a { text-decoration: none; color: inherit; }
   background: rgba(57, 36, 63, 0.9);
   color: #ffffff;
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 700;
   padding: 2px 6px;
   border: 1px solid #ff4fa3;
@@ -1106,7 +1183,7 @@ a { text-decoration: none; color: inherit; }
 
 .project-tags span {
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 700;
   background: #fdf2f8;
   color: #db2777;
@@ -1123,6 +1200,43 @@ a { text-decoration: none; color: inherit; }
 .btn-repo.btn-demo {
   background: #db2777;
   color: #ffffff;
+}
+
+/* ==========================================
+   JANELAS: ARRASTAR + ATIVA / INATIVA (ESTILO XP)
+   ========================================== */
+.project-card .retro-titlebar {
+  cursor: grab;
+  touch-action: none;
+  /* inativa: apagada, cinza-rosada */
+  background: linear-gradient(90deg, #c9b3c0 0%, #d9c8d2 60%, #e3d6dd 100%);
+  transition: none;
+}
+
+.project-card .retro-titlebar .title-text {
+  color: #f5eef2;
+  text-shadow: 1px 1px 0 #7a6573;
+}
+
+/* ativa: gradiente rosa original */
+.project-card.active-window .retro-titlebar {
+  background: linear-gradient(90deg, #db2777 0%, #ff65b2 40%, #c9a7ff 100%);
+}
+
+.project-card.active-window .retro-titlebar .title-text {
+  color: #ffffff;
+  text-shadow: 1px 1px 0 #000000;
+}
+
+/* levantando a janela enquanto arrasta */
+.project-card.dragging {
+  cursor: grabbing;
+  user-select: none;
+  box-shadow: 6px 6px 0 #000000, inset 1px 1px 0 #fbcfe8 !important;
+}
+
+.project-card.dragging .retro-titlebar {
+  cursor: grabbing;
 }
 
 /* ==========================================
@@ -1185,7 +1299,6 @@ a { text-decoration: none; color: inherit; }
   gap: 10px;
 }
 
-/* Campos Inset estilo diálogo de sistema operacional */
 .contato-form input,
 .contato-form textarea {
   width: 100%;
@@ -1194,7 +1307,7 @@ a { text-decoration: none; color: inherit; }
   padding: 8px 10px;
   background: #ffffff;
   border: 2px solid;
-  border-color: #9d174d #ffffff #ffffff #9d174d !important; /* Inset */
+  border-color: #9d174d #ffffff #ffffff #9d174d !important;
   border-radius: 0 !important;
   color: var(--dark-plum);
   outline: none;
@@ -1207,7 +1320,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 /* ==========================================
-   FOOTER RETRO (CONTADOR DE VISITAS & SELOS 88x31)
+   FOOTER (CONTADOR DE VISITAS & SELOS 88x31)
    ========================================== */
 footer {
   text-align: center;
@@ -1218,7 +1331,6 @@ footer {
   margin-top: 20px;
 }
 
-/* Contador de Visitas Retrô */
 .retro-counter-wrap {
   display: inline-flex;
   align-items: center;
@@ -1245,7 +1357,6 @@ footer {
   line-height: 1;
 }
 
-/* Selos 88x31 Clássicos da Web 1.0 */
 .retro-badges-row {
   display: flex;
   justify-content: center;
@@ -1270,10 +1381,21 @@ footer {
   box-shadow: 1px 1px 0 #ffffff;
 }
 
-.badge-pink { background: linear-gradient(180deg, #ff4fa3 0%, #db2777 100%); }
-.badge-blue { background: linear-gradient(180deg, #38bdf8 0%, #0284c7 100%); }
-.badge-green { background: linear-gradient(180deg, #22c55e 0%, #15803d 100%); }
-.badge-purple { background: linear-gradient(180deg, #a855f7 0%, #7e22ce 100%); }
+.badge-pink {
+  background: linear-gradient(180deg, #ff4fa3 0%, #db2777 100%);
+}
+
+.badge-blue {
+  background: linear-gradient(180deg, #38bdf8 0%, #0284c7 100%);
+}
+
+.badge-green {
+  background: linear-gradient(180deg, #22c55e 0%, #15803d 100%);
+}
+
+.badge-purple {
+  background: linear-gradient(180deg, #a855f7 0%, #7e22ce 100%);
+}
 
 footer p {
   font-family: var(--font-mono);
@@ -1282,7 +1404,7 @@ footer p {
 }
 
 /* ==========================================
-   POPUP DE BOAS-VINDAS (DIALOG BOX)
+   POPUP DE BOAS-VINDAS
    ========================================== */
 .retro-modal-overlay {
   position: fixed;
@@ -1336,9 +1458,9 @@ footer p {
   justify-content: flex-end;
 }
 
-/* ==========================
-   WINAMP PLAYER FLOATING
-   ========================== */
+/* ==========================================
+   WINAMP PLAYER FLUTUANTE
+   ========================================== */
 .y2k-player {
   position: fixed;
   bottom: 52px;
@@ -1354,12 +1476,16 @@ footer p {
   overflow: hidden;
 }
 
+.y2k-player.visible {
+  display: block;
+}
+
 .yt-embed-box {
   width: 100%;
   height: 190px;
   margin-bottom: 8px;
   border: 2px solid;
-  border-color: #808080 #ffffff #ffffff #808080; /* Inset */
+  border-color: #808080 #ffffff #ffffff #808080;
   background: #000000;
   overflow: hidden;
 }
@@ -1390,8 +1516,6 @@ footer p {
   background: #ff4fa3 !important;
 }
 
-.y2k-player.visible { display: block; }
-
 .player-top {
   background: linear-gradient(90deg, #db2777, #a855f7);
   color: #ffffff;
@@ -1414,7 +1538,19 @@ footer p {
   font-weight: 900;
 }
 
-.player-body { padding: 10px; }
+.player-
+/* Cursores Retrô Pixel Art (Inspirado em PetraPixel) */
+html, body {
+  cursor: url('images/cursor_default.gif'), auto;
+}
+
+a, button, .btn, .filter-btn, .desktop-icon, .taskbar-tab, .retro-start-btn, .ctrl-btn, .window-controls button, input[type='submit'] {
+  cursor: url('images/cursor_pointer.png') 7 5, pointer !important;
+}
+
+body {
+  padding: 10px;
+}
 
 .track-marquee {
   background: #000000;
@@ -1465,14 +1601,30 @@ footer p {
   height: 3px;
 }
 
-.eq-bar.animating.b1 { animation: eq-jump 0.6s infinite alternate; }
-.eq-bar.animating.b2 { animation: eq-jump 0.4s infinite alternate 0.2s; }
-.eq-bar.animating.b3 { animation: eq-jump 0.5s infinite alternate 0.1s; }
-.eq-bar.animating.b4 { animation: eq-jump 0.7s infinite alternate 0.3s; }
+.eq-bar.animating.b1 {
+  animation: eq-jump 0.6s infinite alternate;
+}
+
+.eq-bar.animating.b2 {
+  animation: eq-jump 0.4s infinite alternate 0.2s;
+}
+
+.eq-bar.animating.b3 {
+  animation: eq-jump 0.5s infinite alternate 0.1s;
+}
+
+.eq-bar.animating.b4 {
+  animation: eq-jump 0.7s infinite alternate 0.3s;
+}
 
 @keyframes eq-jump {
-  0% { height: 3px; }
-  100% { height: 16px; }
+  0% {
+    height: 3px;
+  }
+
+  100% {
+    height: 16px;
+  }
 }
 
 .player-hint {
@@ -1483,7 +1635,7 @@ footer p {
 }
 
 /* ==========================================
-   RETRO TASKBAR (WINDOWS XP / 2000s)
+   TASKBAR (WINDOWS XP / 2000s)
    ========================================== */
 .retro-taskbar {
   position: fixed;
@@ -1583,7 +1735,9 @@ footer p {
   display: none;
 }
 
-.retro-start-menu.open { display: block; }
+.retro-start-menu.open {
+  display: block;
+}
 
 .start-menu-header {
   background: linear-gradient(90deg, #db2777, #ff4fa3);
@@ -1643,19 +1797,159 @@ footer p {
   z-index: 900;
 }
 
-.back-to-top.visible { display: flex; }
-.back-to-top:active { border-color: #9d174d #ffffff #ffffff #9d174d; }
+.back-to-top.visible {
+  display: flex;
+}
 
-/* RESPONSIVE */
+.back-to-top:active {
+  border-color: #9d174d #ffffff #ffffff #9d174d;
+}
+
+/* ==========================================
+   RESPONSIVO
+   ========================================== */
 @media (max-width: 992px) {
-  .hero-grid, .spec-grid, .sobre-grid, .skills-grid, .contato-grid {
+
+  .hero-grid,
+  .spec-grid,
+  .sobre-grid,
+  .skills-grid,
+  .contato-grid {
     grid-template-columns: 1fr;
   }
-  .nav-desktop, .taskbar-tabs { display: none; }
-  .hamburger { display: flex; }
+
+  .nav-desktop,
+  .taskbar-tabs {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  /* sem drag no celular/tablet: libera o scroll */
+  .project-card .retro-titlebar {
+    cursor: default;
+    touch-action: auto;
+  }
 }
 
 @media (max-width: 600px) {
-  .section-title { font-size: 2rem; }
-  .projects-grid { grid-template-columns: 1fr; }
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .retro-marquee-text {
+    animation-duration: 18s;
+  }
+}
+
+/* ==========================================
+   ACESSIBILIDADE: MENOS MOVIMENTO
+   ========================================== */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.sparkle {
+  position: fixed;
+  pointer-events: none;
+  z-index: 999999;
+  font-family: monospace;
+  text-shadow: 0 0 4px currentColor, 0 0 10px #ffffff;
+  animation: sparkle-fall 0.9s ease-out forwards;
+}
+
+@keyframes sparkle-fall {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(0deg);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(var(--dy)) scale(0.3) rotate(120deg);
+  }
+}
+
+/* brilho ao passar o mouse nos elementos clicáveis */
+.btn:hover,
+.filter-btn:hover,
+.btn-repo:hover,
+.nav-link:hover,
+.desktop-icon:hover .icon-img {
+  filter: drop-shadow(0 0 6px #ff4fa3) brightness(1.08);
+}
+
+.project-card:hover,
+.spec-card:hover {
+  box-shadow: 2px 2px 0 #000000, 0 0 14px rgba(255, 79, 163, 0.65), inset 1px 1px 0 #fbcfe8 !important;
+}
+
+.section-title {
+  font-family: 'Press Start 2P', var(--font-pixel);
+  font-size: 1.3rem;
+  line-height: 1.6;
+  letter-spacing: 0;
+}
+
+.stat-number {
+  font-family: 'Press Start 2P', var(--font-pixel);
+  font-size: 1.3rem;
+  line-height: 1.4;
+}
+
+/* opcional: título do hero em pixel */
+.hero h1 {
+  font-family: var(--font-pixel);
+  font-weight: 400;
+  font-size: 2.6rem;
+  line-height: 1.1;
+}
+
+@media (max-width: 600px) {
+  .section-title {
+    font-size: 0.95rem;
+  }
+
+  .stat-number {
+    font-size: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Som / Mudo no System Tray */
+.sound-toggle-tray {
+  cursor: url('images/cursor_pointer.png') 7 5, pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.sound-toggle-tray.muted {
+  opacity: 0.5;
+  filter: grayscale(1);
 }
